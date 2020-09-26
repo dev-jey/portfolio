@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="assets/css/index.css">
     <title>DevJey</title>
 </head>
-<body>
-    My portfolio
-    
+
+<body onload="hideLoader()">
+    <ul class="bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <div class="container-section">
+        <div class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                Dev <span>Jey</span> 
+            </div>
+            <div class="nav-right">
+                <a href="#">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contacts">Contact</a>
+            </div>
+        </div>
+        <div class="landing">
+            <div class="landing-image">
+                <img src="assets/images/tech-guy.svg" alt="landing">
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-holder">
+        <div class="loader1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>
