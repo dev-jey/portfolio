@@ -2,19 +2,25 @@
 let loader_holder = document.getElementsByClassName("loader-holder")[0];
 var myNav = document.getElementById('navbar');
 var myLogo = document.getElementById('logo-right');
-window.onscroll = function () { 
+window.onscroll = function () {
     "use strict";
-    if (document.body.scrollTop >= 70 || document.documentElement.scrollTop >= 70 ) {
-        myNav.style.background="#fff";
-        myNav.style.boxShadow="0px 0px 10px silver";
-    } 
-    else {
-        myNav.style.background="none"
-        myNav.style.boxShadow="none";
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
+        const progress = document.querySelectorAll('.progress-done');
+        progress.forEach(p=>{
+            setTimeout(() => {
+                p.style.opacity = 1;
+                p.style.width = p.getAttribute('data-done') + '%';
+            }, 500)
+        });
     }
 };
 
 function hideLoader() {
     loader_holder.style.visibility = "hidden";
-    loader_holder.style.opacity=0
+    loader_holder.style.opacity = 0
 }
+
+
+
+
+

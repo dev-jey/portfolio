@@ -67,7 +67,7 @@ a{
 	position: absolute;
 	list-style: none;
 	display: block;
-	background-color: rgba(42, 157, 143,.03);
+	background-color: rgba(42, 157, 143,.06);
 	bottom: 0;
 	animation: circle 15s infinite;
 	transition-timing-function: linear;
@@ -226,7 +226,10 @@ a{
  .navbar{
      position: sticky;
      top: 0;
+     box-shadow: 0px 0px 10px silver;
+     background: #fff;
      z-index: 10000;
+     padding-top:10px ;
  }
  .navbar-container{
     display: grid;
@@ -267,9 +270,9 @@ a{
  * About section
  */
 .about{
-    margin-top: 5rem;
+    /* margin-top: 2rem; */
     background: var(--main-color);
-    padding: 5rem 0;
+    padding: 4rem 0;
     width: 100%;
 }
 .about-container{
@@ -288,7 +291,7 @@ a{
     width: 100%;
     /* height: 100%; */
     border-radius: 5px;  
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .about-content__right{
@@ -313,22 +316,62 @@ a{
 * Skills
 */
 .skills{
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 .skills-container{
-    padding:1rem
+    padding:1rem;
 }
+.skills-container h1{
+    padding: 2rem 0;
+}
+.tech{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    text-align: center;
+    font-weight: bolder;
+    place-items: center;
+    gap: 1rem;
+}
+.tech div{
+    display: grid;
+    place-items: center;
+}
+.tech img{
+    width: 50%;
+}
+.detailed-skills{
+    padding:1rem .2rem;
+}
+.technical{
+    display:grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/**
+* Progress for skills
+*/
+.progress {
+    height: 30px;
+    width: 100%;
+    background-color: lightgray;
+  }
+  
+  .progress-done {
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    background: linear-gradient(to left, var(--main-color),#03dac1);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+  }
+
 
 @media screen and (max-width: 768px){
     .landing-image img{
         width: 100%;
-    }
-}
-@media screen and (max-width: 340px){
-    .landing-image img{
-        width: 100%;
-    }
-    .navbar{
-        font-size: .55rem;
     }
 }
