@@ -349,30 +349,42 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .hire-me{
-    background-image: url('../assets/images/tech-guy.svg');
-    background: var(--main-color);
-    padding: 2rem 0;
+    background: var(--secondary-color-dark);
+    padding: 1rem 0;
+}
+.hire-me-container img{
+    width: 90%;
 }
 .hire-me-container{
     display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 1rem
+    grid-template-columns: 20% 40% 40%;
+    padding: 2rem;
+    gap: 1rem;
 }
 .hire-me h1{
     color:#fff
 }
-.hire-button{
+.hire-button, .hire-title{
     margin-left: auto;
     margin-top:auto;
     margin-bottom:auto;
 }
-
+.hire-button{
+    margin-right: .5rem
+}
 /**
 * Projects
 */
 .projects{
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
+.projects-container{
+    padding: 1rem
+}
+
+
+
+
 /**
 * Progress for skills
 */
@@ -398,5 +410,8 @@ a{
 @media screen and (max-width: 768px){
     .landing-image img{
         width: 100%;
+    }
+    .hire-title{
+        font-size: .65rem;
     }
 }
