@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6{
     padding: 0;
     margin: 0;
 }
+
+
 a{
     color: var(--secondary-color-dark);
     text-decoration: none;
@@ -370,7 +372,7 @@ a{
     margin-bottom:auto;
 }
 .hire-button{
-    margin-right: .5rem
+    margin-right: 1.75rem
 }
 /**
 * Projects
@@ -412,6 +414,6 @@ a{
         width: 100%;
     }
     .hire-title{
-        font-size: .65rem;
+        font-size: .5rem;
     }
 }
