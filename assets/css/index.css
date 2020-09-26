@@ -309,6 +309,15 @@ a{
     padding-top: 1rem;
     padding-bottom: 2.5rem;
 }
+/**
+* Skills
+*/
+.skills{
+    padding: 5rem 0;
+}
+.skills-container{
+    padding:1rem
+}
 
 @media screen and (max-width: 768px){
     .landing-image img{
