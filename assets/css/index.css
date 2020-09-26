@@ -225,7 +225,6 @@ a{
  */
  .navbar{
      position: sticky;
-     padding-top: 1rem;
      top: 0;
  }
  .navbar-container{
