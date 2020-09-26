@@ -10,6 +10,8 @@
     --animate-delay: 0.9s;
     --main-color: rgba(42, 157, 143);
     --secondary-color-dark: #2F2E41;
+    --text-muted: #686868;
+    --base-width: 768px;
   }
 html, body{
     font-family: 'Oswald', sans-serif;
@@ -19,16 +21,32 @@ html, body{
     box-sizing: border-box;
     height: 100%;
     scroll-behavior: smooth;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: var(--secondary-color-dark);
+    text-decoration: none;
+}
+.btn-general{
+    background: #fff;
+    padding: .5rem 1rem;
+    color: var(--main-color);
+    transition: background .5s;
+}
+.btn-general:hover{
+    border: 1px solid #fff;
+    background: var(--main-color);
+    color: #fff;
 }
 .container-section    {  
-    max-width: 768px;
+    max-width: var(--base-width);
     width: 100%;
     text-align:left; 
     margin:auto;
-    padding:  1rem;
-    padding-top: 4rem;
-    height: 100%;
-    position: relative;
 }
 
 /**
@@ -132,7 +150,7 @@ html, body{
 /*Settings for the loader*/
 
 .loader-holder{
-    background: rgba(0, 0, 0, .2);
+    /* background: rgba(0, 0, 0, .2); */
     position: absolute;
     top:0;
     left:0;
@@ -206,12 +224,17 @@ html, body{
  * Content Styles
  */
  .navbar{
-    position: sticky;
-    top: 0;
+     position: sticky;
+     padding-top: 1rem;
+     top: 0;
+ }
+ .navbar-container{
     display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: 20% 80%;
   grid-template-rows: auto;
-    padding: 1rem;
+  position: sticky;
+  top: 0;
+  padding:  1rem;
  }
  .nav-right{
      text-align: right;
@@ -229,4 +252,52 @@ html, body{
  }
  .logo span{
      color: var(--main-color);
+ }
+ .landing-image img{
+     width: 100%;
+     margin-top: 5rem;
+ }
+
+ /**
+ * About section
+ */
+.about{
+    margin-top: 5rem;
+    background: var(--main-color);
+    padding: 5rem 0;
+    width: 100%;
+}
+.about-container{
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+}
+.about-content__left {
+    height:100%;
+    padding: 1rem;
+}
+.about-content__left img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.about-content__right{
+    padding: 1rem;
+}
+.about-content__right h1{
+    color: #fff;
+    font-weight: bold;
+}
+.about-content__right p{
+    color: rgb(228, 228, 228);
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+}
+ @media screen and (max-width: 340px){
+     .navbar{
+         font-size: .55rem;
+     }
  }
