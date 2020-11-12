@@ -163,6 +163,7 @@ a{
     visibility: visible;
     opacity: 1;
     z-index: 10000;
+    position: fixed;
     transition: opacity 3s ease-in-out;
     -webkit-transition: opacity 3s ease-in-out;
     -moz-transition: opacity 3s ease-in-out;
