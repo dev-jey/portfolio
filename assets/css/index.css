@@ -41,11 +41,36 @@ a{
     color: var(--main-color);
     transition: background .5s;
     cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+}
+.btn-general::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    padding: .5rem 1rem;
+    color: var(--main-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform .3s ease-in-out;
+    top:0;
+    left: 0;
+    transform: scale(0,1);
+    transform-origin: right;
+}
+.btn-proj::after{
+    content: "Check Projects";
+}
+.btn-git::after{
+    content: "Github";
+}
+.btn-general:hover::after{
+    transform: scale(1,1);
+    transform-origin: left;
 }
 .btn-general:hover{
-    border: 1px solid #fff;
-    background: var(--main-color);
-    color: #fff;
+    transform: scale(0,0);
+    transition: transform 1s ease-in-out;
 }
 .container-section    {  
     max-width: var(--base-width);
@@ -250,15 +275,30 @@ a{
      text-align: right;
  }
  .nav-right a{
+     position: relative;
      text-decoration: none;
      color: var(--secondary-color-dark);
      padding: 0 .25rem;
+     font-weight: bold;
  }
- .nav-right a:hover{
-    color: var(--main-color);
+ .nav-right a::after{
+     content: "";
+     color: red;
+     position: absolute;
+     background-color: rgba(75, 221, 185, 0.4);
+     width: 100%;
+     height: 10px;
+     bottom: 0;
+     left: 0;
+     z-index: 1000;
+     transform: scale(0,1);
+     transition: transform .4s ease-in;
+     transform-origin: right;
+     border-radius: 5px;
  }
- .nav-right a:focus{
-    text-decoration: underline;
+ .nav-right a:hover::after{
+    transform: scale(1,1);
+    transform-origin: left;
  }
  .logo span{
      color: var(--main-color);
@@ -379,7 +419,7 @@ a{
 }
 .hire-button{
     margin-right: 1.75rem;
-    padding: .2rem .5rem !important;
+    width: 95px;
     height: 10px
 }
 /**
@@ -440,6 +480,7 @@ a{
     top:0;
     width: 100%;
     left: 0;
+    opacity: 0;
     text-align: right;
     background: linear-gradient(to bottom, rgba(42, 157, 143, .005),  rgba(42, 157, 143, .55), rgba(42, 157, 143, .95) ,rgba(42, 157, 143, .95), rgba(42, 157, 143, 1));
     position: absolute;
@@ -450,11 +491,18 @@ a{
     display: grid;
     align-content: end;
     color: #fff;
+    opacity: 1;
     width: 100%;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: opacity 1s ease-in-out;
+}
+
+.card-back p{
+    opacity: 0;
 }
 .card:hover .card-back p{
     padding: 1rem;
+    transition: opacity 1s ease-in-out;
 }
 .card:hover .card-back a{
     width: 100%;
