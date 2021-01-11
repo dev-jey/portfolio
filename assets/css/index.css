@@ -10,7 +10,7 @@
     --main-color: rgba(42, 157, 143);
     --secondary-color-dark: #2F2E41;
     --text-muted: #686868;
-    --base-width: 768px;
+    --base-width: 940px;
   }
 html, body{
     font-family: 'Oswald', sans-serif;
@@ -386,7 +386,7 @@ a{
     place-items: center;
 }
 .tech img{
-    width: 50%;
+    width: 30%;
 }
 .detailed-skills{
     padding:1rem .2rem;
@@ -455,7 +455,7 @@ a{
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.2rem;
 }
 .card{
@@ -525,6 +525,14 @@ a{
 .buttons-front{
     display: none;
 }
+.cont-sect{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.conts-phone{
+    display: grid;
+    justify-content: end;
+}
 
 
 @media screen and (max-width: 768px){
@@ -556,4 +564,9 @@ a{
     .skills-container, .projects-container, .contacts-container{
     padding: 1rem;
     }
+
+.conts-phone{
+    margin-top: 50px;
+    justify-content: start;
+}
 }
