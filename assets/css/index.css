@@ -23,7 +23,7 @@ body {
     position: relative;
 }
 body {
-    background: linear-gradient(to right, rgb(103, 230, 215), var(--main-color));
+    background: linear-gradient(to right, rgba(103, 230, 215, .5), rgba(103, 230, 215, .7));
 }
 h1,
 h2,
@@ -268,7 +268,7 @@ a {
 .about {
     background-image:
     linear-gradient(to right, rgba(103, 230, 215, 0), rgba(103, 230, 215, 0)),
-    url('/assets/images/bg3.jpg');
+    url('/assets/images/bg3.svg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
