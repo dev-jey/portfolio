@@ -2,7 +2,7 @@
 var myNav = document.getElementById('home');
 
 function scrollNav() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         myNav.classList.add("whit-bg");
     } else {
         myNav.classList.remove("whit-bg");
