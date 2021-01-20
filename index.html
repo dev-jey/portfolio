@@ -11,17 +11,36 @@
     <title>DevJey - Javascript & Python Software Developer</title>
 </head>
 
-<body class="animate__animated animate__fadeIn" onload="hideLoader()">
-    <ul class="bubbles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+<body class="animate__animated animate__fadeIn">
+    <img src="assets/images/btp.svg" alt="" onclick="topFunction()" id="myBtn" title="Go to top">
+
+
+
+
+
+    <div id="modal1" class="modal">
+
+        <span class="close">&times;</span>
+
+        <div class="modal-content">
+            <div class="modal-img">
+                <img data-src="assets/images/tele.svg" alt="" class="lazy" src="assets/images/loading.gif" width="100%">
+            </div>
+            <div class="modal-desc">
+                <div class="modal-header">
+                    <h2>Telegram Textbot</h2>
+                    <br>
+                </div>
+                <p>This is a chatbot created in flask to enable users to automate the repetitive process of
+                    sending messages to channels or groups.</p>
+                <div>
+                    Js, Python
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
 
     <div class="navbar  animate__animated animate__fadeIn animate__delay-1s" id="home">
@@ -43,9 +62,9 @@
         <div class="container-section">
             <br><br>
             <div class="about-container">
-                <div class="about-content__left">
+                <!-- <div class="about-content__left">
                     <img src="assets/images/myimg.png" alt="">
-                </div>
+                </div> -->
                 <div class="about-content__right">
                     <h1>ABOUT ME</h1>
                     <p>I am a passionate full stack software developer with over 3 years of experience in the field. My
@@ -65,13 +84,16 @@
                 <div class="tech">
                     <div class="language">
                         <img src="assets/images/icons/icons8-python.svg" alt="">
-                        Python</div>
+                        Python
+                    </div>
                     <div class="language">
                         <img src="assets/images/icons/icons8-javascript.svg" alt="">
-                        Javascript</div>
+                        Javascript
+                    </div>
                     <div class="language">
                         <img src="assets/images/icons/icons8-java.svg" alt="">
-                        Java</div>
+                        Java
+                    </div>
                 </div>
                 <br><br>
                 <h1>SKILLS</h1>
@@ -185,9 +207,9 @@
             <br>
             <br>
             <div class="cards">
-                <div class="card">
+                <div class="card" id="card1">
                     <div class="card-front">
-                        <img data-src="assets/images/tele.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/tele.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Telegram Texting Bot</h4>
                         <br>
@@ -202,7 +224,7 @@
                         <a href="http://telegramtextbot.herokuapp.com/" target="_blank" class="buttons-front">Visit
                             App</a>
                     </div>
-                    <div class="card-back animate__animated animate__fadeIn">
+                    <!-- <div class="card-back animate__animated animate__fadeIn">
                         <ul>
                             <li>Flask</li>
                             <li>Selenium</li>
@@ -214,22 +236,23 @@
                             class="buttons-back">View on Github</a>
                         <a href="http://telegramtextbot.herokuapp.com/" target="_blank" class="buttons-back">Visit
                             App</a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/shopduka.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/shopduka.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Shop Management App</h4>
                         <br>
                         <hr>
                         <p>
-                            This is a shop management app created in flask, aimed at easing mangement of shop attendants, inventry and finances within a shop.
+                            This is a shop management app created in flask, aimed at easing mangement of shop
+                            attendants, inventry and finances within a shop.
                         </p>
                         <br>
-                        <a href="https://github.com/dev-jey/Store-Manager-v1" target="_blank"
-                            class="buttons-front">View on Github</a>
+                        <a href="https://github.com/dev-jey/Store-Manager-v1" target="_blank" class="buttons-front">View
+                            on Github</a>
                         <a href="http://shopduka.herokuapp.com/" target="_blank" class="buttons-front">Visit
                             App</a>
                     </div>
@@ -250,7 +273,7 @@
 
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/fadhila.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/fadhila.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Fadhila Network</h4>
                         <br>
@@ -279,7 +302,7 @@
 
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/indiana.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/indiana.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Authors Haven</h4>
                         <br>
@@ -311,7 +334,7 @@
 
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/coro.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/coro.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Corona Tracker</h4>
                         <br>
@@ -341,7 +364,7 @@
                 </div>
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/jkm.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/jkm.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Jumia Kilimall App</h4>
                         <br>
@@ -370,7 +393,7 @@
                 </div>
                 <div class="card">
                     <div class="card-front">
-                        <img data-src="assets/images/mediclaim.svg" alt="" class="lazy"  src="assets/images/loading.gif">
+                        <img data-src="assets/images/mediclaim.svg" alt="" class="lazy" src="assets/images/loading.gif">
                         <br><br>
                         <h4>Mediclaim - Medbook Africa</h4>
                         <br>
@@ -403,7 +426,8 @@
             </div>
         </div>
     </div>
-    <div class="contacts  animate__animated animate__fadeIn animate__delay-1s" id="contacts" style="background-color: rgb(248, 248, 248);">
+    <div class="contacts  animate__animated animate__fadeIn animate__delay-1s" id="contacts"
+        style="background-color: rgb(248, 248, 248);">
         <div class="container-section">
             <div class="contacts-container">
                 <h1>CONTACT ME</h1>
@@ -421,16 +445,6 @@
                 </div>
             </div>
 
-        </div>
-    </div>
-
-    <div class="loader-holder">
-        <div class="loader1">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
     </div>
     <script src="assets/js/index.js"></script>
