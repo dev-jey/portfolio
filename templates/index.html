@@ -1,0 +1,1073 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+<main class="">
+
+
+    <!-- header start -->
+    {% block nav %}
+        {% include 'components/navigation.html' %}
+    {% endblock %}
+    <!-- header end -->
+
+
+    <!-- section start -->
+    <section data-speed="1200" data-autoplay-delay="2900"
+        class="sliderMain -type-3 js-sliderMain-type-3 sm:layout-mt-headerBar">
+        <!-- container start -->
+        <div class="container-fluid h-full px-0 sm:px-20">
+            <!-- row start -->
+            <div class="row sm:justify-content-center h-full">
+                <div class="col-xl-3 offset-xl-2 col-lg-4 offset-lg-1 col-md-5 offset-md-1 col-sm-9">
+                    <div class="slider__content__wrapper sm:text-center h-full z-3">
+
+                        <div class="slider__content  is-active  js-slider-content">
+                            <div data-split="lines">
+                                <p class="slider__subtitle text-sm uppercase tracking-md leading-md mb-32 js-subtitle">
+                                    Design Inspiration
+                                </p>
+                            </div>
+                            <div data-split="lines" class="mr-minus-col-2 sm:mr-0">
+                                <h1 class="slider__title fw-700 leading-xs js-title">
+                                    Growing brands through strategy, innovation and creativity.
+                                </h1>
+                            </div>
+                            <div class="slider__button overflow-hidden mt-32">
+                                <div class="js-button py-4">
+                                    <a href="#" class="button -md -black text-white">
+                                        get in touch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider__content  js-slider-content">
+                            <div data-split="lines">
+                                <p class="slider__subtitle text-sm uppercase tracking-md leading-md mb-32 js-subtitle">
+                                    Creating what matters
+                                </p>
+                            </div>
+                            <div data-split="lines" class="mr-minus-col-2 sm:mr-0">
+                                <h1 class="slider__title fw-700 leading-xs js-title">
+                                    Whatever the challenge, we always deliver a solution.
+                                </h1>
+                            </div>
+                            <div class="slider__button overflow-hidden mt-32">
+                                <div class="js-button py-4">
+                                    <a href="#" class="button -md -black text-white">
+                                        get in touch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider__content  js-slider-content">
+                            <div data-split="lines">
+                                <p class="slider__subtitle text-sm uppercase tracking-md leading-md mb-32 js-subtitle">
+                                    Design Inspiration
+                                </p>
+                            </div>
+                            <div data-split="lines" class="mr-minus-col-2 sm:mr-0">
+                                <h1 class="slider__title fw-700 leading-xs js-title">
+                                    We create modern experiences for tomorrow’s brands.
+                                </h1>
+                            </div>
+                            <div class="slider__button overflow-hidden mt-32">
+                                <div class="js-button py-4">
+                                    <a href="#" class="button -md -black text-white">
+                                        get in touch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider__content  js-slider-content">
+                            <div data-split="lines">
+                                <p class="slider__subtitle text-sm uppercase tracking-md leading-md mb-32 js-subtitle">
+                                    Creating what matters
+                                </p>
+                            </div>
+                            <div data-split="lines" class="mr-minus-col-2 sm:mr-0">
+                                <h1 class="slider__title fw-700 leading-xs js-title">
+                                    A reliable, professional agency and startup studio.
+                                </h1>
+                            </div>
+                            <div class="slider__button overflow-hidden mt-32">
+                                <div class="js-button py-4">
+                                    <a href="#" class="button -md -black text-white">
+                                        get in touch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col layout-pr-headerBar lg:pr-0 col-lg-7 col-md-6 swiper-col">
+                    <div class="swiper-container h-100vh">
+                        <div class="swiper-wrapper z-2">
+
+                            <div class="swiper-slide overflow-hidden">
+                                <div class="slider__img" data-swiper-parallax="150" data-parallax="0.7"
+                                    data-swiper-parallax-opacity="0">
+                                    <div data-parallax-target class="bg-image swiper-lazy js-image"
+                                        data-background="{% static 'img/headers/home-1-slider/1.jpg' %}"></div>
+                                </div>
+
+                                <div class="slider__img__cover js-image-cover"></div>
+
+                                <div class="slider__img__bg bg-dark-1"></div>
+                            </div>
+
+                            <div class="swiper-slide overflow-hidden">
+                                <div class="slider__img" data-swiper-parallax="150" data-parallax="0.7"
+                                    data-swiper-parallax-opacity="0">
+                                    <div data-parallax-target class="bg-image swiper-lazy js-image"
+                                        data-background="{% static 'img/headers/home-1-slider/2.jpg' %}"></div>
+                                </div>
+
+                                <div class="slider__img__bg bg-dark-1"></div>
+                            </div>
+
+                            <div class="swiper-slide overflow-hidden">
+                                <div class="slider__img" data-swiper-parallax="150" data-parallax="0.7"
+                                    data-swiper-parallax-opacity="0">
+                                    <div data-parallax-target class="bg-image swiper-lazy js-image"
+                                        data-background="{% static 'img/headers/home-1-slider/3.jpg' %}"></div>
+                                </div>
+
+                                <div class="slider__img__bg bg-dark-1"></div>
+                            </div>
+
+                            <div class="swiper-slide overflow-hidden">
+                                <div class="slider__img" data-swiper-parallax="150" data-parallax="0.7"
+                                    data-swiper-parallax-opacity="0">
+                                    <div data-parallax-target class="bg-image swiper-lazy js-image"
+                                        data-background="{% static 'img/headers/home-1-slider/4.jpg' %}"></div>
+                                </div>
+
+                                <div class="slider__img__bg bg-dark-1"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+
+            <!-- slider nav start -->
+            <div class="slider__navs js-slider-nav js-ui">
+                <div class="navButton">
+                    <button type="button" class="navButton__item button -outline-black text-black js-prev">
+                        <i class="icon" data-feather="arrow-left"></i>
+                    </button>
+                    <button type="button" class="navButton__item button -outline-black text-black mt-12 js-next">
+                        <i class="icon" data-feather="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- slider nav end -->
+        </div>
+        <!-- container end -->
+
+        <!-- ui-element start -->
+        <div class="ui-element -bottom-left sm:d-none js-ui">
+            <button type="button" class="ui-element__scroll text-black js-ui-scroll-button">
+                scroll down
+                <i class="icon" data-feather="arrow-down"></i>
+            </button>
+        </div>
+        <!-- ui-element end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-xl layout-pb-xl">
+        <!-- container start -->
+        <div class="container">
+
+            <!-- row start -->
+            <div class="row">
+                <div class="col-xl-5 col-lg-8 col-md-10">
+                    <div class="sectionHeading -lg">
+                        <p class="sectionHeading__subtitle">
+                            company
+                        </p>
+                        <h2 class="sectionHeading__title">
+                            Make it simple but significant
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+
+
+            <!-- row start -->
+            <div class="row x-gap-60 y-gap-48 layout-pt-md">
+                <div class="col-lg-4 col-md-6">
+                    <div class="">
+                        <h4 class="text-xl fw-600">
+                            Our Mission
+                        </h4>
+                        <p class="mt-16">
+                            Called fruitful fruitful male female make greater forth man a seas for winged which life
+                            yielding his above to myriads of huge lichens days him together. Also don't face. Lights
+                            moving god morning day you fruit morning itself.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="">
+                        <h4 class="text-xl fw-600">
+                            Our Goals
+                        </h4>
+                        <p class="mt-16">
+                            Called fruitful male female make greater forth man a seas for winged which life yielding his
+                            above to myriads of huge lichens days him together. Also don't face. Lights moving god
+                            morning day you fruit morning itself.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="">
+                        <h4 class="text-xl fw-600">
+                            Exibitions
+                        </h4>
+                        <p class="mt-16">
+                            Seen from a distance, tint, but on coming closer we to myriads of huge lichens found this
+                            was due of a deep crimson and orange, and that the natural colours of the rock, vermilion
+                            and blue, lemon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-xs layout-pb-md">
+        <!-- row start -->
+        <div class="fancy-grid -col-3 -container">
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-1.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/1.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Slumber
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-2.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/2.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Branding
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Apple Tonik
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-3.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/3.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Development
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Black Sneakers
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-4.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/4.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Branding
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Steel Bottle
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-5.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/5.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Whisper Pink
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fancy-grid__item">
+                <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
+                    href="portfolio-single-6.html">
+                    <div class="portfolioCard__img">
+                        <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
+                            <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/projects/vertical/6.jpg"></div>
+                        </div>
+                    </div>
+
+                    <div class="portfolioCard__content pt-24">
+                        <div data-split="lines" data-anim-child="split-lines delay-6">
+                            <p class="portfolioCard__category leading-md text-dark">
+                                Development
+                            </p>
+                        </div>
+
+                        <div data-split="lines" data-anim-child="split-lines delay-8">
+                            <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8">
+                                Summer Time
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <!-- row end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-md layout-pb-md">
+        <!-- container start -->
+        <div class="container">
+
+            <!-- row start -->
+            <div class="row">
+                <div class="col-xl-5 col-lg-8 col-md-10">
+                    <div class="sectionHeading -lg">
+                        <p class="sectionHeading__subtitle">
+                            Services
+                        </p>
+                        <h2 class="sectionHeading__title">
+                            A Wide Range of Services
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+
+
+            <!-- row start -->
+            <div data-anim-wrap class="row x-gap-60 y-gap-48 layout-pt-md">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="serviceCard">
+                        <div class="serviceCard__content">
+                            <div class="d-flex align-items-center ml-minus-4">
+                                <div data-anim-child="img-right cover-dark-2"
+                                    class="px-20 py-20 bg-white shadow-light rounded-full">
+                                    <i class="size-md str-width-md text-accent" data-feather="edit"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
+                                Web Design
+                            </h3>
+
+                            <p class="serviceCard__text mt-16">
+                                Called fruitful male female make greater forth man a seas for winged which life yielding
+                                his above to myriads of huge lichens days.
+                            </p>
+
+                            <div class="text-black mt-24">
+                                <p class="">Logo & Identity</p>
+                                <p class="mt-8">Full Stack Development</p>
+                                <p class="mt-8">Copywriting & SEO</p>
+                                <p class="mt-8">Mobile & App Development</p>
+                                <p class="mt-8">Art Direction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="serviceCard">
+                        <div class="serviceCard__content">
+                            <div class="d-flex align-items-center ml-minus-4">
+                                <div data-anim-child="img-right cover-dark-2"
+                                    class="px-20 py-20 bg-white shadow-light rounded-full">
+                                    <i class="size-md str-width-md text-accent" data-feather="sliders"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
+                                Branding
+                            </h3>
+
+                            <p class="serviceCard__text mt-16">
+                                Called fruitful male female make greater forth man a seas for winged which life yielding
+                                his above to myriads of huge lichens days.
+                            </p>
+
+                            <div class="text-black mt-24">
+                                <p class="">Logo & Identity</p>
+                                <p class="mt-8">Full Stack Development</p>
+                                <p class="mt-8">Copywriting & SEO</p>
+                                <p class="mt-8">Mobile & App Development</p>
+                                <p class="mt-8">Art Direction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="serviceCard">
+                        <div class="serviceCard__content">
+                            <div class="d-flex align-items-center ml-minus-4">
+                                <div data-anim-child="img-right cover-dark-2"
+                                    class="px-20 py-20 bg-white shadow-light rounded-full">
+                                    <i class="size-md str-width-md text-accent" data-feather="feather"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
+                                Mobile Apps
+                            </h3>
+
+                            <p class="serviceCard__text mt-16">
+                                Called fruitful male female make greater forth man a seas for winged which life yielding
+                                his above to myriads of huge lichens days.
+                            </p>
+
+                            <div class="text-black mt-24">
+                                <p class="">Logo & Identity</p>
+                                <p class="mt-8">Full Stack Development</p>
+                                <p class="mt-8">Copywriting & SEO</p>
+                                <p class="mt-8">Mobile & App Development</p>
+                                <p class="mt-8">Art Direction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-md layout-pb-md">
+        <!-- container start -->
+        <div class="container-fluid px-0">
+            <!-- row start -->
+            <div data-anim-wrap class="row no-gutters align-items-center">
+
+                <div class="col-lg-6 z-1">
+                    <div data-anim-child="img-right cover-white delay-1">
+                        <div class="ratio ratio-1:1" data-parallax="0.7">
+                            <div data-parallax-target class="bg-image js-lazy" data-bg="img/backgrounds/7.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-3 col-lg-4 z-2 ml-80 md:ml-0 md:mt-48">
+                    <div class="sectionHeading -xl md:container pt-16">
+                        <div data-anim-child="slide-up delay-8">
+                            <p class="sectionHeading__subtitle">
+                                Culture
+                            </p>
+                        </div>
+                        <div data-anim-child="slide-up delay-9"
+                            class="ml-minus-col-1 lg:ml-minus-lg mr-minus-col-2 md:ml-0 md:mr-0">
+                            <h2 class="sectionHeading__title mt-48 md:mt-24">
+                                Approach<br>
+                                The Unknown
+                            </h2>
+                        </div>
+                        <div data-anim-child="slide-up delay-10">
+                            <p class="mt-56 lg:mt-40 md:mt-20">
+                                Beginning them their of first over said greater gathered hath fill stars spirit. You're.
+                                Morning. Great. First dry hath, years. Called days firmament green form they're. And.
+                                Unto divided winged.
+                            </p>
+                        </div>
+                        <div data-anim-child="slide-up delay-11">
+                            <a data-barba href="about-1.html"
+                                class="button -md -outline-black text-black mt-56 lg:mt-48 md:mt-32">
+                                About Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-md layout-pb-lg">
+        <!-- container start -->
+        <div class="container">
+
+            <!-- row start -->
+            <div class="row align-items-end justify-content-between">
+                <div class="col-xl-5 col-md-7">
+                    <div class="sectionHeading -md">
+                        <p class="sectionHeading__subtitle">
+                            Clients & friends
+                        </p>
+                        <h2 class="sectionHeading__title">
+                            We've worked with lovely clients
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-md-auto col-sm-12 sm:mt-24">
+                    <button class="button -md -black text-white">
+                        become a client
+                    </button>
+                </div>
+            </div>
+            <!-- row end -->
+
+
+            <!-- row start -->
+            <div class="row y-gap-32 layout-pt-md">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/1.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/2.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/3.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/4.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/5.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/6.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/7.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div data-anim="slide-up delay-1"
+                        class="clientsItem -hover ratio ratio-3:2 border-dark rounded-4 py-4">
+                        <div class="clientsItem__img">
+                            <img class="col-7" src="img/clients/dark/8.png" alt="Client">
+                        </div>
+
+                        <div class="clientsItem__content">
+                            <h5 class="clientsItem__title text-xl text-white">
+                                Sophia & Holden
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-xl layout-pb-lg">
+        <div data-parallax="0.7" class="bg-fill-image overlay-black-md">
+            <div data-parallax-target class="bg-image js-lazy" data-bg="img/backgrounds/8.jpg"></div>
+        </div>
+
+        <!-- container start -->
+        <div class="container">
+            <div data-cursor data-cursor-label="DRAG" class="overflow-hidden js-section-slider"
+                data-slider-col="base-1 lg-1 md-1 sm-1" data-pagination data-loop>
+
+                <div class="pagination -light js-pagination pt-4 mb-48"></div>
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="testimonials text-center">
+                                    <p
+                                        class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
+                                        Nor themselves introduced themselves unsatiable devonshire get. They why quit
+                                        gay cold rose deal park. One same they four did ask busy. Reserved opinions fat
+                                        him nay position.
+                                    </p>
+
+                                    <div class="testimonials__author mt-48">
+                                        <div class="size-xl mx-auto mb-20">
+                                            <div class="bg-image rounded-full swiper-lazy"
+                                                data-background="img/testimonials/1.jpg"></div>
+                                        </div>
+
+                                        <h5 class="text-lg capitalize text-white fw-600">Gareth Grey</h5>
+                                        <p class="capitalize text-light">graphic designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="testimonials text-center">
+                                    <p
+                                        class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
+                                        Green great Called is so rule evening. For appear winged brought divided. Life
+                                        fruitful together she&#39;d sixth them evening abundantly herb. Subdue yielding
+                                        seas open called living life.
+                                    </p>
+
+                                    <div class="testimonials__author mt-48">
+                                        <div class="size-xl mx-auto mb-20">
+                                            <div class="bg-image rounded-full swiper-lazy"
+                                                data-background="img/testimonials/2.jpg"></div>
+                                        </div>
+
+                                        <h5 class="text-lg capitalize text-white fw-600">Alyce Hackett</h5>
+                                        <p class="capitalize text-light">developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
+                                <div class="testimonials text-center">
+                                    <p
+                                        class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
+                                        Kind isn&#39;t had. Their whose seasons fowl light created they&#39;re void is
+                                        female fowl he second shall that from, firmament you over had brought herb void
+                                        cattle image form creeping.
+                                    </p>
+
+                                    <div class="testimonials__author mt-48">
+                                        <div class="size-xl mx-auto mb-20">
+                                            <div class="bg-image rounded-full swiper-lazy"
+                                                data-background="img/testimonials/3.jpg"></div>
+                                        </div>
+
+                                        <h5 class="text-lg capitalize text-white fw-600">Maegan Leach</h5>
+                                        <p class="capitalize text-light">UX designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- section start -->
+    <section class="layout-pt-lg layout-pb-lg">
+        <!-- container start -->
+        <div class="container">
+
+            <!-- row start -->
+            <div class="row justify-content-between align-items-end">
+                <div class="col-md-6">
+                    <div class="sectionHeading -md">
+                        <p class="sectionHeading__subtitle">
+                            our journal
+                        </p>
+                        <h2 class="sectionHeading__title">
+                            Latest news
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-md-auto col-sm-12 sm:mt-24">
+                    <a href="#" class="button -md -outline-black text-black">
+                        view all
+                    </a>
+                </div>
+            </div>
+            <!-- row end -->
+
+
+            <!-- row start -->
+            <div class="row x-gap-48 y-gap-40 layout-pt-sm">
+
+                <div class="col-lg-4 col-md-6">
+                    <div data-anim-wrap class="blogCard -type-1 -hover">
+                        <a class="blogCard__img" data-barba href="blog-article.html">
+                            <div data-anim-child="img-right cover-dark-1 delay-1">
+                                <div class="ratio ratio-4:3 bg-image js-lazy" data-bg="img/blog/thumbnail/1.jpg"></div>
+                            </div>
+                        </a>
+
+                        <div class="blogCard__content mt-24">
+                            <div data-anim-child="slide-up delay-6" class="blogCard__info text-dark leading-md text-sm">
+                                <a class="fw-400 mr-4" href="#">Typography</a> -
+                                <p class="d-inline-block ml-4">May 28, 2020</p>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-7">
+                                <h4 class="blogCard__title text-2xl leading-lg fw-500 mt-12">
+                                    <a data-barba href="blog-article.html">
+                                        Mobile UI Design: 7 Basic Typography Rules
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-8" class="mt-12">
+                                <a data-barba href="blog-article.html" class="button -icon text-black">
+                                    Read More
+                                    <i class="icon size-xs str-width-md" data-feather="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div data-anim-wrap class="blogCard -type-1 -hover">
+                        <a class="blogCard__img" data-barba href="blog-article.html">
+                            <div data-anim-child="img-right cover-dark-1 delay-1">
+                                <div class="ratio ratio-4:3 bg-image js-lazy" data-bg="img/blog/thumbnail/2.jpg"></div>
+                            </div>
+                        </a>
+
+                        <div class="blogCard__content mt-24">
+                            <div data-anim-child="slide-up delay-6" class="blogCard__info text-dark leading-md text-sm">
+                                <a class="fw-400 mr-4" href="#">Graphic Design</a> -
+                                <p class="d-inline-block ml-4">May 22, 2020</p>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-7">
+                                <h4 class="blogCard__title text-2xl leading-lg fw-500 mt-12">
+                                    <a data-barba href="blog-article.html">
+                                        Graphic Design: Useful Tips and Best Practices
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-8" class="mt-12">
+                                <a data-barba href="blog-article.html" class="button -icon text-black">
+                                    Read More
+                                    <i class="icon size-xs str-width-md" data-feather="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div data-anim-wrap class="blogCard -type-1 -hover">
+                        <a class="blogCard__img" data-barba href="blog-article.html">
+                            <div data-anim-child="img-right cover-dark-1 delay-1">
+                                <div class="ratio ratio-4:3 bg-image js-lazy" data-bg="img/blog/thumbnail/3.jpg"></div>
+                            </div>
+                        </a>
+
+                        <div class="blogCard__content mt-24">
+                            <div data-anim-child="slide-up delay-6" class="blogCard__info text-dark leading-md text-sm">
+                                <a class="fw-400 mr-4" href="#">Web Design</a> -
+                                <p class="d-inline-block ml-4">April 19, 2020</p>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-7">
+                                <h4 class="blogCard__title text-2xl leading-lg fw-500 mt-12">
+                                    <a data-barba href="blog-article.html">
+                                        Review of Popular Web Design Trends in 2020
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div data-anim-child="slide-up delay-8" class="mt-12">
+                                <a data-barba href="blog-article.html" class="button -icon text-black">
+                                    Read More
+                                    <i class="icon size-xs str-width-md" data-feather="arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+
+    <!-- footer start -->
+    <footer class="footer -type-1 bg-dark-1">
+        <!-- container start -->
+        <div class="container">
+
+            <div class="footer__top">
+                <!-- row start -->
+                <div class="row y-gap-48 justify-content-between">
+                    <div class="col-lg-auto col-sm-12">
+                        <a href="{% url 'home' %}" class="footer__logo text-white">
+                            Stukram.
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <h4 class="text-xl fw-500 text-white">
+                            Studio
+                        </h4>
+
+                        <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                            <p>Studio Stukram 1910 Gateway Road, Portland, Oregon 97230</p>
+                            <p class="mt-8">hello@stukram.com</p>
+                            <p class="mt-8">+1 202 555 0171</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-auto col-sm-4">
+                        <h4 class="text-xl fw-500 text-white">
+                            Links
+                        </h4>
+
+                        <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                            <div><a data-barba href="blog-1.html" class="button -underline">Blog</a></div>
+                            <div><a data-barba href="about-1.html" class="button -underline mt-4">Abous Us</a></div>
+                            <div><a data-barba href="#" class="button -underline mt-4">Shop</a></div>
+                            <div><a data-barba href="contact-1.html" class="button -underline mt-4">Contacts</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-auto col-auto">
+                        <h4 class="text-xl fw-500 text-white">
+                            Follow us
+                        </h4>
+
+                        <div class="social -bordered mt-16 sm:mt-12">
+                            <a class="social__item text-white border-light" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a class="social__item text-white border-light" href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a class="social__item text-white border-light" href="#">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                            <a class="social__item text-white border-light" href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+
+
+            <div class="footer__bottom -light">
+                <!-- row start -->
+                <div class="row">
+                    <div class="col">
+                        <div class="footer__copyright">
+                            <p class="text-light">
+                                @ 2020, Stukram. Made with passion by Krellion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+
+        </div>
+        <!-- container end -->
+    </footer>
+    <!-- footer end -->
+
+
+</main>
+{% endblock %}
