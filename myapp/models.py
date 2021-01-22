@@ -1,6 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
-
+import os
 from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 from tinymce.models import HTMLField
@@ -31,6 +31,7 @@ def photo_delete(sender, instance, **kwargs):
 class Skill(models.Model):
     title = models.CharField(max_length=100)
     image = CloudinaryField('image',folder='portfolio/skills')
+    icon = models.CharField(max_length=100, null=True)
     description = HTMLField()
     created_at = models.DateField(auto_now_add=True)
 
@@ -47,10 +48,10 @@ def photo_delete(sender, instance, **kwargs):
     cloudinary.uploader.destroy(instance.image.public_id)
 
 
-class ParticularSkill(models.Model):
-    parent_skill = models.ForeignKey(Skill, related_name='skill',
+class Specialty(models.Model):
+    parent_skill = models.ForeignKey(Skill, related_name='specialty',
                                  on_delete=models.CASCADE,
-                                 blank=False, null=False)
+                                 blank=True, null=True)
     title = models.CharField(max_length=100)
     created_at = models.DateField(auto_now_add=True)
 
@@ -106,8 +107,28 @@ class Project(models.Model):
 
 
     @property
-    def cloudinary_image(self):
-        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.image}"
+    def my_cover_image(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.cover_image}"
+    
+    @property
+    def my_display_image1(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.display_image1}"
+
+    @property
+    def my_display_image2(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.display_image2}"
+
+    @property
+    def my_display_image3(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.display_image3}"
+
+    @property
+    def my_bg_image(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.bg_image}"
+
+    @property
+    def my_bg_image2(self):
+        return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.bg_image2}"
 
     class Meta:
         '''Defines the ordering of the

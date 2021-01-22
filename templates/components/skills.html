@@ -21,97 +21,33 @@
 
         <!-- row start -->
         <div data-anim-wrap class="row x-gap-60 y-gap-48 layout-pt-md">
-
+            {% for skill in skills %}
             <div class="col-lg-4 col-md-6">
                 <div class="serviceCard">
                     <div class="serviceCard__content">
                         <div class="d-flex align-items-center ml-minus-4">
                             <div data-anim-child="img-right cover-dark-2"
                                 class="px-20 py-20 bg-white shadow-light rounded-full">
-                                <i class="size-md str-width-md text-accent" data-feather="edit"></i>
+                                <i class="size-md str-width-md text-accent" data-feather="{{skill.skill.icon}}"></i>
                             </div>
                         </div>
 
                         <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
-                            Web Design
+                            {{skill.skill.title}}
                         </h3>
 
                         <p class="serviceCard__text mt-16">
-                            Called fruitful male female make greater forth man a seas for winged which life yielding
-                            his above to myriads of huge lichens days.
+                            {{skill.skill.description|safe}}
                         </p>
-
+                        {% for specialty in skill.specialties %}
                         <div class="text-black mt-24">
-                            <p class="">Logo & Identity</p>
-                            <p class="mt-8">Full Stack Development</p>
-                            <p class="mt-8">Copywriting & SEO</p>
-                            <p class="mt-8">Mobile & App Development</p>
-                            <p class="mt-8">Art Direction</p>
+                            <p class="mt-8">{{specialty.title}}</p>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="serviceCard">
-                    <div class="serviceCard__content">
-                        <div class="d-flex align-items-center ml-minus-4">
-                            <div data-anim-child="img-right cover-dark-2"
-                                class="px-20 py-20 bg-white shadow-light rounded-full">
-                                <i class="size-md str-width-md text-accent" data-feather="sliders"></i>
-                            </div>
-                        </div>
-
-                        <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
-                            Branding
-                        </h3>
-
-                        <p class="serviceCard__text mt-16">
-                            Called fruitful male female make greater forth man a seas for winged which life yielding
-                            his above to myriads of huge lichens days.
-                        </p>
-
-                        <div class="text-black mt-24">
-                            <p class="">Logo & Identity</p>
-                            <p class="mt-8">Full Stack Development</p>
-                            <p class="mt-8">Copywriting & SEO</p>
-                            <p class="mt-8">Mobile & App Development</p>
-                            <p class="mt-8">Art Direction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="serviceCard">
-                    <div class="serviceCard__content">
-                        <div class="d-flex align-items-center ml-minus-4">
-                            <div data-anim-child="img-right cover-dark-2"
-                                class="px-20 py-20 bg-white shadow-light rounded-full">
-                                <i class="size-md str-width-md text-accent" data-feather="feather"></i>
-                            </div>
-                        </div>
-
-                        <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
-                            Mobile Apps
-                        </h3>
-
-                        <p class="serviceCard__text mt-16">
-                            Called fruitful male female make greater forth man a seas for winged which life yielding
-                            his above to myriads of huge lichens days.
-                        </p>
-
-                        <div class="text-black mt-24">
-                            <p class="">Logo & Identity</p>
-                            <p class="mt-8">Full Stack Development</p>
-                            <p class="mt-8">Copywriting & SEO</p>
-                            <p class="mt-8">Mobile & App Development</p>
-                            <p class="mt-8">Art Direction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
         <!-- row end -->
 

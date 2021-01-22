@@ -29,7 +29,7 @@
 
     <!-- section start -->
     {% block portfolio %}
-    {% include 'components/portfolio.html' %}
+    {% include 'components/portfolio.html' with projects=projects %}
     {% endblock %}
     <!-- section end -->
 
@@ -55,18 +55,6 @@
     <!-- section end -->
 
 
-    <!-- section start -->
-    {% block reviews %}
-    {% include 'components/reviews.html' %}
-    {% endblock %}
-    <!-- section end -->
-
-
-    <!-- section start -->
-    {% block latestinblog %}
-    {% include 'components/latestinblog.html' %}
-    {% endblock %}
-    <!-- section end -->
 
 
     <!-- footer start -->
