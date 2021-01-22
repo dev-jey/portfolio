@@ -145,8 +145,8 @@ STATICFILES_DIRS = (
 )
 
 
-TINYMCE_JS_URL = os.path.join(STATIC_URL, "assets/js/tiny_mce/tinymce.min.js")
-TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "assets/js/tiny_mce")
+TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tinymce.min.js")
+TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce")
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
