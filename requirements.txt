@@ -4,3 +4,5 @@ gunicorn==20.0.4
 psycopg2==2.8.6
 pytz==2020.5
 sqlparse==0.4.1
+cloudinary
+django-tinymce
