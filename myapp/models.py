@@ -98,6 +98,7 @@ class Specialty(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = HTMLField()
+    featured = models.BooleanField(default=False)
     cover_image = CloudinaryField('image',folder='portfolio/project/cover')
     bg_image = CloudinaryField('image',folder='portfolio/project/background')
     skill = models.ForeignKey(Skill, related_name='project_role',
@@ -160,3 +161,15 @@ def update_slug(sender,instance, signal, **kwargs):
 @receiver(pre_delete, sender=Project)
 def photo_delete(sender, instance, **kwargs):
     cloudinary.uploader.destroy(instance.image.public_id)
+
+
+
+class ProjectTechnology(models.Model):
+    parent_project= models.ForeignKey(Project, related_name='technology',
+                                 on_delete=models.CASCADE,
+                                 blank=True, null=True)
+    title = models.CharField(max_length=100)
+    created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import (
 render
 )
-from .models import Project, Skill, Specialty, Client
+from .models import Project, Skill, Specialty, Client, ProjectTechnology
 
 # HTTP Error 400
 def bad_request(request, *args, **kwargs):
@@ -54,22 +54,26 @@ def permission_denied(request, *args, **kwargs):
 @csrf_exempt
 def get_home(request):
     projects = Project.objects.all()
-    skills = Skill.objects.all()
+    featured_project = projects.filter(featured=True).first()
     clients = Client.objects.all()
+    all_skills = get_all_skills()
+    return render(request, 'index.html', {'projects':projects, 'skills': all_skills, 'clients': clients, 'featured_project':featured_project})
+
+
+def get_all_skills():
+    skills = Skill.objects.all()
 
     all_skills = []
     for skill in skills:
         specialties = []
         for specialty in Specialty.objects.all():
-            print(skill.slug, specialty.parent_skill.slug)
             if specialty.parent_skill.slug == skill.slug:
                 specialties.append(specialty)
         all_skills.append({
             'skill': skill,
             'specialties': specialties
         })
-
-    return render(request, 'index.html', {'projects':projects, 'skills': all_skills, 'clients': clients})
+    return all_skills
 
 
 @csrf_exempt
@@ -81,7 +85,9 @@ def get_portfolio(request):
 @csrf_exempt
 def get_about(request):
     clients = Client.objects.all()
-    return render(request, 'aboutpage.html', {'clients':clients})
+    projects = Project.objects.all()
+    featured_project = Project.objects.filter(featured=True).first()
+    return render(request, 'aboutpage.html', {'clients':clients, 'featured_project':featured_project, 'projects':projects})
 
 @csrf_exempt
 def get_contact(request):
@@ -90,9 +96,15 @@ def get_contact(request):
 
 @csrf_exempt
 def get_services(request):
-    return render(request, 'servicespage.html')
+    skills = get_all_skills()
+    return render(request, 'servicespage.html', {'skills': skills})
 
 
 @csrf_exempt
 def get_single_project(request, slug):
-    return render(request, 'singleproject.html')
+    project = Project.objects.filter(slug=slug).first()
+    technologies = []
+    for tech in ProjectTechnology.objects.all():
+        if tech.parent_project.slug == slug:
+            technologies.append(tech)
+    return render(request, 'singleproject.html', {'project':project, 'technologies':technologies})

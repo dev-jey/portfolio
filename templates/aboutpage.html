@@ -24,7 +24,7 @@
           <div class="col-lg-6 col-md-10">
             <div data-anim-child="slide-up" class="sectionHeading -sm">
               <h1 class="sectionHeading__title">
-                14 years of successful projects and digital expertise that we can’t wait to share with you.
+                3 years of successful projects and digital expertise that I can’t wait to share with you.
               </h1>
             </div>
           </div>
@@ -33,13 +33,13 @@
           <div class="col-lg-5 col-md-10 md:mt-32 sm:mt-20">
             <div data-anim-child="slide-up delay-1">
               <p class="text-lg sm:text-base">
-                Moveth brought face. Without of given land thing own. Sea yielding second you're abundantly shall
-                created Under whose also bearing tree night.
+                Over time, I have gotten to enjoy my passion for programming. I have gained a lot of skills and
+                 expertise in different technologies.
               </p>
               <p class="text-lg sm:text-base mt-32 md:mt-20">
-                Give life form isn't third there form bearing day can't. Which subdue, divide subdue two, there evening.
-                Is firmament, grass own had. Bring man created also bearing set air. Under make seasons third very,
-                isn't subdue third seasons land living his i meat.
+                I am focused on <b>code quality</b>, and timely delivery of features. I can work well under team settings,
+                and use different collaborative tools to deliver a project within a shorter time. Additionally, I am open
+                 minded and receptive to <b>feeback</b>>.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@
       <!-- container start -->
       <div class="container-wide layout-pt-lg">
         <div data-anim-child="slide-up delay-3" data-parallax="0.7" class="h-lg">
-          <div data-parallax-target class="bg-image js-lazy" data-bg="{% static 'img/backgrounds/4.jpg' %}"></div>
+          <div data-parallax-target class="bg-image js-lazy" data-bg="{{featured_project.my_cover_image}}"></div>
         </div>
       </div>
       <!-- container end -->
@@ -86,27 +86,28 @@
 
       <!-- row start -->
       <div class="row no-gutters mb-8 layout-pt-md sm:d-none">
+
         <div class="col-lg-2 col-md-1">
-          <p class="title-xs fw-600 text-black">
-            Year
-          </p>
-        </div>
-
-        <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1">
-          <p class="title-xs fw-600 text-black">
-            Award
-          </p>
-        </div>
-
-        <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-1">
           <p class="title-xs fw-600 text-black">
             Project
           </p>
         </div>
 
-        <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+        <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1">
+          <p class="title-xs fw-600 text-black">
+            Skill
+          </p>
+        </div>
+
+        <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-1">
           <p class="title-xs fw-600 text-black">
             Link
+          </p>
+        </div>
+
+        <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+          <p class="title-xs fw-600 text-black">
+            Github Repo
           </p>
         </div>
       </div>
@@ -116,32 +117,35 @@
       <div data-anim-wrap class="section-border-bottom-dark sm:mt-32">
 
         <!-- row start -->
+        {% for project in projects %}
         <div data-anim-child="slide-up delay-2" class="row no-gutters border-bottom-dark py-20">
+
           <div class="col-lg-2 col-md-1">
-            <p class="text-lg">
-              2020
+            <p class="text-lg text-black">
+              {{project.title}}
             </p>
           </div>
 
           <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1">
             <p class="text-lg">
-              Interior design
+              {{project.skill.title}}
             </p>
           </div>
 
           <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-1">
-            <p class="text-lg">
-              Slumber
-            </p>
+            <a href="{{project.website}}" class="button -underline text-lg text-black" target="_blank">
+              View Site
+            </a>
           </div>
 
           <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
-            <a href="#" class="button -underline text-lg text-black">
-              View project
+            <a href="{{project.github}}" class="button -underline text-lg text-black" target="_blank">
+              View Github
             </a>
           </div>
         </div>
         <!-- row end -->
+        {% endfor %}
 
       </div>
 

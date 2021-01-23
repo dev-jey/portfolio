@@ -14,7 +14,7 @@
     <!-- page header start -->
     <section class="masthead -type-work-1 -full-screen bg-black sm:text-center js-masthead-type-work-1 js-bg">
         <div data-parallax="0.7" class="masthead__bg overlay-black-md js-image">
-            <div data-parallax-target class="bg-image js-lazy js-bg-item" data-bg="img/projects/horizontal/3.jpg"></div>
+            <div data-parallax-target class="bg-image js-lazy js-bg-item" data-bg="{{project.my_cover_image}}"></div>
         </div>
 
         <div class="masthead__content">
@@ -23,13 +23,13 @@
                     <div class="col-xl-10 col-sm-10 z-3">
                         <div data-split="lines">
                             <p class="masthead__subtitle text-lg sm:text-base text-white mb-32 sm:mb-24 js-subtitle">
-                                Development
+                                {{project.skill.title}}
                             </p>
                         </div>
 
                         <div data-split="lines">
                             <h1 class="masthead__title text-white fw-700 js-title">
-                                Black Sneakers
+                                {{project.title}}
                             </h1>
                         </div>
 
@@ -40,7 +40,7 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Role</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">Designer</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">Software Developer</p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Start</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">08 Jan 2020</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">{{project.start_date|date}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Launch</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">15 Mar 2020</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">{{project.end_date|date}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -67,9 +67,9 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Website</h5>
-                                            <a href="https://themeforest.net/"
+                                            <a href="{{project.website}}"
                                                 class="button d-block fw-500 text-lg leading-sm text-white mt-12 sm:mt-8">
-                                                themeforest.net
+                                                {{project.website}}
                                             </a>
                                         </div>
                                     </div>
@@ -94,66 +94,24 @@
                 <div class="col-xl-8 col-lg-10">
                     <div class="d-flex text-xs tracking-md">
                         <p class="text-accent fw-600 mr-16">01.-</p>
-                        <p class="uppercase fw-500">Introduction</p>
+                        <p class="uppercase fw-500">Description</p>
                     </div>
 
                     <p class="text-3xl md:text-2xl leading-lg text-black mt-24">
-                        Were whales seed waters seasons grass every she'd sixth firmament night unto. Bearing, good
-                        Greater
-                        so cattle meat forth divide, that creature air make fourth every fruit Above.
+                       {{project.description|safe}}
                     </p>
                 </div>
 
-                <div class="col-md-10 layout-pt-md">
-                    <!-- row start -->
-                    <div class="row x-gap-40 y-gap-60">
-
-                        <div class="col-lg-3 col-6">
-                            <div data-anim="counter" data-counter="96" class="counter">
-                                <h2 class="number -md -left fw-500 js-counter-num">
-                                    0
-                                </h2>
-                                <h5 class="text-lg text-dark fw-500 tracking-none mt-20">
-                                    Working Hours
-                                </h5>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-6">
-                            <div data-anim="counter" data-counter="52" class="counter">
-                                <h2 class="number -md -left fw-500 js-counter-num">
-                                    0
-                                </h2>
-                                <h5 class="text-lg text-dark fw-500 tracking-none mt-20">
-                                    Working Hours
-                                </h5>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-6">
-                            <div data-anim="counter" data-counter="123" class="counter">
-                                <h2 class="number -md -left fw-500 js-counter-num">
-                                    0
-                                </h2>
-                                <h5 class="text-lg text-dark fw-500 tracking-none mt-20">
-                                    Working Hours
-                                </h5>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-6">
-                            <div data-anim="counter" data-counter="43" class="counter">
-                                <h2 class="number -md -left fw-500 js-counter-num">
-                                    0
-                                </h2>
-                                <h5 class="text-lg text-dark fw-500 tracking-none mt-20">
-                                    Working Hours
-                                </h5>
-                            </div>
-                        </div>
-
+                <br><br><br> <br><br><br> <br><br>
+                <div class="col-xl-8 col-lg-10">
+                    <div class="d-flex text-xs tracking-md">
+                        <p class="text-accent fw-600 mr-16">02.-</p>
+                        <p class="uppercase fw-500">Github Activity Chart</p>
                     </div>
-                    <!-- row end -->
+
+                    <p class="text-3xl md:text-2xl leading-lg text-black mt-24">
+                        <img src="https://ghchart.rshah.org/dev-jey" alt="Dev-jey Github chart" width="100%" />
+                    </p>
                 </div>
             </div>
             <!-- row end -->
@@ -167,65 +125,9 @@
     <!-- section start -->
     <div class="layout-pt-md">
         <div data-parallax="0.7" class="h-80vh">
-            <div data-parallax-target class="bg-image js-lazy" data-bg="img/project3/wide-2.jpg"></div>
+            <div data-parallax-target class="bg-image js-lazy" data-bg="{{project.my_bg_image}}"></div>
         </div>
     </div>
-    <!-- section end -->
-
-
-    <!-- section start -->
-    <section class="projects-nav">
-        <!-- row start -->
-        <div class="row no-gutters">
-
-            <div class="col-lg-6">
-                <a data-barba href="portfolio-single-2.html" class="projects-nav__item -prev bg-dark-1">
-                    <div class="projects-nav__img">
-                        <div class="bg-image js-lazy" data-bg="img/projects/horizontal/2.jpg"></div>
-                    </div>
-
-                    <div class="projects-nav__content">
-                        <div class="projects-nav__icon">
-                            <i class="size-xl str-width-xs text-white" data-feather="arrow-left-circle"></i>
-                        </div>
-
-                        <h3 class="text-4xl fw-400 tracking-none text-white">
-                            Apple Tonik
-                        </h3>
-
-                        <p class="projects-nav__text -prev text-sm fw-500 text-white tracking-md uppercase">
-                            PREV
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-lg-6">
-                <a data-barba href="portfolio-single-4.html" class="projects-nav__item -next bg-dark-1">
-                    <div class="projects-nav__img">
-                        <div class="bg-image js-lazy" data-bg="img/projects/horizontal/4.jpg"></div>
-                    </div>
-
-                    <div class="projects-nav__content">
-                        <h3 class="text-4xl fw-400 tracking-none text-white">
-                            Steel Bottle
-                        </h3>
-
-                        <div class="projects-nav__icon">
-                            <i class="size-xl str-width-xs text-white" data-feather="arrow-right-circle"></i>
-                        </div>
-
-                        <p class="projects-nav__text -next text-sm fw-500 text-white tracking-md uppercase">
-                            NEXT
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-        <!-- row end -->
-    </section>
     <!-- section end -->
 
 

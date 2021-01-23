@@ -33,11 +33,6 @@
     {% endblock %}
     <!-- section end -->
 
-    <!-- section start -->
-    {% block haveaproject %}
-    {% include 'components/haveaproject.html' %}
-    {% endblock %}
-    <!-- section end -->
 
     <!-- section start -->
     <br>
@@ -48,19 +43,10 @@
 
 
     <!-- section start -->
-    {% block softskills %}
-    {% include 'components/softskills.html' %}
+    {% block featuredproject %}
+    {% include 'components/featuredproject.html' with featured_project=featured_project %}
     {% endblock %}
     <!-- section end -->
-
-
-    <!-- section start -->
-    {% block contact %}
-    {% include 'components/contact.html' %}
-    {% endblock %}
-    <!-- section end -->
-
-
 
 
     <!-- footer start -->
