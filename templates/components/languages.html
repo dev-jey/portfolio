@@ -1,0 +1,48 @@
+{% load static %}
+<section class="layout-pt-lg layout-pb-lg">
+  <!-- container start -->
+  <div data-anim-wrap class="container">
+    <!-- row start -->
+    <div class="row">
+
+      <div class="col-lg-6">
+        <div class="sectionHeading -md">
+          <p class="sectionHeading__subtitle">
+            Our Skills
+          </p>
+          <h2 class="sectionHeading__title text-black">
+            We build modern experiences
+          </h2>
+          <p class="mt-24">
+            So seasons deep days forth wherein abundantly void place fruitful you'll isn't fruitful, heaven rule created
+            deep she'd our years unto subdue you morning which fruitful Day so lesser blessed Fruitful multiply every so
+            blessed be.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-5 offset-lg-1 md:mt-48">
+        <div class="lineChart">
+
+          {% for skill in skills %}
+          <div data-anim-child="line-chart" class="lineChart__item" data-percent="{{skill.skill.percentage}}">
+            <div class="lineChart__content text-black fw-500">
+              <p>{{skill.skill.title}}</p>
+              <p class="lineChart__number number js-number">{{skill.skill.percentage}}%</p>
+            </div>
+
+            <div class="lineChart-bar">
+              <div class="lineChart-bar__bg"></div>
+              <div class="lineChart-bar__item bg-accent js-bar"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- container end -->
+</section>

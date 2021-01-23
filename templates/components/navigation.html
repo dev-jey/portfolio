@@ -40,177 +40,25 @@
                         <div class="navList__wrap">
                             <ul class="navList js-navList">
                                 <li>
-                                    <a data-barba href="home-1-classic.html">
-                                        Classic Menu
+                                    <a data-barba href="{% url 'home' %}">
+                                        Home
                                     </a>
+                                </li> 
+
+                                <li>
+                                    <a data-barba href="{% url 'about' %}">About</a>
                                 </li>
 
-                                <li class="menu-item-has-children">
-                                    <a>Main Pages</a>
-
-                                    <ul class="subnav-list">
-                                        <li>
-                                            <a data-barba href="{% url 'home' %}">Main Slider</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="home-2.html">Main Dark</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="home-3.html">Simple Slider</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="home-4.html">Bold Light</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="home-5.html">Static Header Dark</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="home-6.html">Personal</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="projectSlider-1.html">Project Slider</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a data-barba href="{% url 'services' %}">Services</a>
                                 </li>
 
-                                <li class="menu-item-has-children">
-                                    <a>Inner Pages</a>
-
-                                    <ul class="subnav-list">
-                                        <li class="menu-item-has-children">
-                                            <a>About</a>
-
-                                            <ul class="subnav-list">
-                                                <li>
-                                                    <a data-barba href="about-1.html">About 1</a>
-                                                </li>
-                                                <li>
-                                                    <a data-barba href="about-2.html">About 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a>Services</a>
-
-                                            <ul class="subnav-list">
-                                                <li>
-                                                    <a data-barba href="services-1.html">Services 1</a>
-                                                </li>
-                                                <li>
-                                                    <a data-barba href="services-2.html">Services 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a>404</a>
-
-                                            <ul class="subnav-list">
-                                                <li>
-                                                    <a data-barba href="404-light.html">404 Light</a>
-                                                </li>
-                                                <li>
-                                                    <a data-barba href="404-dark.html">404 Dark</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item-has-children">
-                                            <a>Contact</a>
-
-                                            <ul class="subnav-list">
-                                                <li>
-                                                    <a data-barba href="contact-1.html">Contact 1</a>
-                                                </li>
-                                                <li>
-                                                    <a data-barba href="contact-2.html">Contact 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-                                        <li>
-                                            <a data-barba href="team.html">Team</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="pricing.html">Pricing Plans</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="clients.html">Clients</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a data-barba href="{% url 'portfolio' %}">Portfolio</a>
                                 </li>
 
-                                <li class="menu-item-has-children">
-                                    <a>Portfolio</a>
-
-                                    <ul class="subnav-list">
-                                        <li>
-                                            <a data-barba href="vertical-projects.html">Vertical Projects</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-simple-2-col.html">Simple 2 Columns</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-masonry-2-col.html">Masonry 2 Columns</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-masonry-3-col.html">Masonry 3 Columns</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-masonry-4-col.html">Masonry 4 Columns</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-fancy-2-col.html">Fancy 2 Columns</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="grid-fancy-3-col.html">Fancy 3 Columns</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a>Works</a>
-
-                                    <ul class="subnav-list">
-                                        <li>
-                                            <a data-barba href="portfolio-single-1.html">Project 1</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="portfolio-single-2.html">Project 2</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="portfolio-single-3.html">Project 3</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="portfolio-single-4.html">Project 4</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="portfolio-single-5.html">Project 5</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="portfolio-single-6.html">Project 6</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a>Blog</a>
-
-                                    <ul class="subnav-list">
-                                        <li>
-                                            <a data-barba href="blog-1.html">Blog List</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="blog-2.html">Blog 2 cols</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="blog-fancy-3-col.html">Blog Fancy 3 cols</a>
-                                        </li>
-                                        <li>
-                                            <a data-barba href="blog-article.html">Blog List Single</a>
-                                        </li>
-                                    </ul>
+                                <li>
+                                    <a data-barba href="{% url 'contact' %}">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -225,7 +73,7 @@
 
                                 <div class="nav__info__content text-lg text-white mt-16">
                                     <p>
-                                        Studio Stukram 1910 Gateway Road, Portland, Oregon 97230
+                                        Nairobi, Kenya
                                     </p>
                                 </div>
                             </div>
@@ -236,21 +84,21 @@
                                 </h5>
 
                                 <div class="nav__info__content text-lg text-white mt-16">
-                                    <a href="#">Behance</a>
-                                    <a href="#">Dribbble</a>
-                                    <a href="#">Facebook</a>
-                                    <a href="#">Twitter</a>
+                                    <a href="#">Github</a>
+                                    <a href="#">Stack Overflow</a>
+                                    <a href="#">Dribble</a>
+                                    <a href="#">LinkedIn</a>
                                 </div>
                             </div>
 
                             <div class="nav__info__item js-navInfo-item">
                                 <h5 class="text-sm tracking-none fw-500">
-                                    Contact Us
+                                    Contact Me
                                 </h5>
 
                                 <div class="nav__info__content text-lg text-white mt-16">
-                                    <a href="#">hello@stukram.com</a>
-                                    <a href="#">+1 202 555 0171</a>
+                                    <a href="#">savalijey@gmail.com</a>
+                                    <a href="#">+254708197333</a>
                                 </div>
                             </div>
                         </div>

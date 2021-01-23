@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+<main class="">
+
+
+  <!-- header start -->
+  {% block nav %}
+  {% include 'components/navigation.html' %}
+  {% endblock %}
+  <!-- header end -->
+<br><br><br>
+  <section class="layout-pt-md layout-pb-md">
+    <div class="section-filter">
+
+      <!-- container start -->
+      <div class="container">
+        <!-- row start -->
+        <div class="row y-gap-32 justify-content-between align-items-center">
+          <div class="col-auto">
+            <div class="filter-button-group text-dark fw-500">
+              <button class="button mr-20 btn-active" data-filter="*">Show All</button>
+              {% for skill in skills %}
+              <button class="button mr-20" data-filter=".{{skill.slug}}">{{skill.title}}</button>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <a class="button -md -outline-black text-black" href="{% url 'contact' %}">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        <!-- row end -->
+      </div>
+      <!-- container end -->
+
+
+      <!-- container start -->
+      <div class="container layout-pt-sm">
+        <div class="masonry -col-2 -gap-32">
+          <div class="masonry__sizer"></div>
+          {% for project in projects %}
+          <div class="masonry__item  {{project.skill.slug}}">
+            <div data-anim="slide-up" class="portfolioCard -type-2 -hover">
+              <div class="ratio">
+                <div class="portfolioCard__img">
+                  <div class="portfolioCard__img__inner">
+                    <div class="bg-image js-lazy" data-bg="{{project.my_cover_image}}"></div>
+                  </div>
+                </div>
+
+                <div class="portfolioCard__content">
+                  <a href="#" class="portfolioCard__category text-light mb-8">{{project.skill.title}}</a>
+                  <h3 class="portfolioCard__title text-3xl md:text-2xl fw-600 text-white">{{project.title}}</h3>
+                </div>
+
+                <a href="{{project.slug}}" data-barba class="portfolioCard__link"></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+      <!-- container end -->
+
+    </div>
+  </section>
+
+
+  <!-- footer start -->
+  {% block footer %}
+  {% include 'components/footer.html' %}
+  {% endblock %}
+  <!-- footer end -->
+
+
+</main>
+{% endblock %}

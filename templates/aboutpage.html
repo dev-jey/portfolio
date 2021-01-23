@@ -1,0 +1,225 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+<main class="">
+
+
+  <!-- header start -->
+  {% block nav %}
+  {% include 'components/navigation.html' %}
+  {% endblock %}
+  <!-- header end -->
+
+
+  <!-- section start -->
+  <section class="layout-pt-2xl layout-pb-md">
+    <div data-anim-wrap>
+
+      <!-- container start -->
+      <div class="container">
+        <!-- row start -->
+        <div class="row justify-content-between">
+
+          <div class="col-lg-6 col-md-10">
+            <div data-anim-child="slide-up" class="sectionHeading -sm">
+              <h1 class="sectionHeading__title">
+                14 years of successful projects and digital expertise that we can’t wait to share with you.
+              </h1>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5 col-md-10 md:mt-32 sm:mt-20">
+            <div data-anim-child="slide-up delay-1">
+              <p class="text-lg sm:text-base">
+                Moveth brought face. Without of given land thing own. Sea yielding second you're abundantly shall
+                created Under whose also bearing tree night.
+              </p>
+              <p class="text-lg sm:text-base mt-32 md:mt-20">
+                Give life form isn't third there form bearing day can't. Which subdue, divide subdue two, there evening.
+                Is firmament, grass own had. Bring man created also bearing set air. Under make seasons third very,
+                isn't subdue third seasons land living his i meat.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- row end -->
+      </div>
+      <!-- container end -->
+
+
+      <!-- container start -->
+      <div class="container-wide layout-pt-lg">
+        <div data-anim-child="slide-up delay-3" data-parallax="0.7" class="h-lg">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="{% static 'img/backgrounds/4.jpg' %}"></div>
+        </div>
+      </div>
+      <!-- container end -->
+
+    </div>
+  </section>
+  <!-- section end -->
+
+
+  <!-- section start -->
+  <section class="layout-pt-md layout-pb-lg border-bottom-dark">
+    <!-- container start -->
+    <div class="container">
+
+      <!-- row start -->
+      <div class="row">
+        <div class="col-xl-7 col-lg-9">
+          <div class="sectionHeading -lg">
+            <p class="sectionHeading__subtitle">
+              completed projects
+            </p>
+            <h2 class="sectionHeading__title">
+              More than 6 fully functional fullstack projects
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- row end -->
+
+
+      <!-- row start -->
+      <div class="row no-gutters mb-8 layout-pt-md sm:d-none">
+        <div class="col-lg-2 col-md-1">
+          <p class="title-xs fw-600 text-black">
+            Year
+          </p>
+        </div>
+
+        <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1">
+          <p class="title-xs fw-600 text-black">
+            Award
+          </p>
+        </div>
+
+        <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-1">
+          <p class="title-xs fw-600 text-black">
+            Project
+          </p>
+        </div>
+
+        <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+          <p class="title-xs fw-600 text-black">
+            Link
+          </p>
+        </div>
+      </div>
+      <!-- row end -->
+
+
+      <div data-anim-wrap class="section-border-bottom-dark sm:mt-32">
+
+        <!-- row start -->
+        <div data-anim-child="slide-up delay-2" class="row no-gutters border-bottom-dark py-20">
+          <div class="col-lg-2 col-md-1">
+            <p class="text-lg">
+              2020
+            </p>
+          </div>
+
+          <div class="col-lg-3 offset-lg-1 col-md-3 offset-md-1">
+            <p class="text-lg">
+              Interior design
+            </p>
+          </div>
+
+          <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-1">
+            <p class="text-lg">
+              Slumber
+            </p>
+          </div>
+
+          <div class="col-lg-2 offset-lg-1 col-md-2 offset-md-1">
+            <a href="#" class="button -underline text-lg text-black">
+              View project
+            </a>
+          </div>
+        </div>
+        <!-- row end -->
+
+      </div>
+
+    </div>
+    <!-- container end -->
+  </section>
+  <!-- section end -->
+
+
+  <!-- section start -->
+  <section class="layout-pt-md layout-pb-md bg-dark-1">
+    <!-- container start -->
+    <div class="container">
+      <!-- row start -->
+      <div class="row x-gap-32 y-gap-32">
+
+        {% for client in clients %}
+        <div class="col-lg-3 col-sm-6">
+          <div data-anim="slide-up delay-1" class="clientsItem -hover -light ratio ratio-3:2 border-light rounded-4">
+            <div class="clientsItem__img">
+              <img class="col-7" src="{{client.cloudinary_image}}" alt="Client">
+            </div>
+
+            <div class="clientsItem__content">
+              <h5 class="clientsItem__title text-xl">
+                {{client.title}}
+              </h5>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+      <!-- row end -->
+    </div>
+    <!-- container end -->
+  </section>
+  <!-- section end -->
+
+  <!-- section start -->
+  <section data-parallax="0.7" class="layout-pt-lg layout-pb-lg">
+    <div data-parallax-target class="overlay-black-md bg-image js-lazy" data-bg="{% static 'img/backgrounds/3.jpg' %}"></div>
+
+    <!-- container start -->
+    <div class="container z-5">
+      <!-- row start -->
+      <div class="row justify-content-center text-center">
+        <div class="col-12">
+          <p class="text-sm uppercase tracking-lg text-white mb-20">
+            Contact us
+          </p>
+
+          <h2 class="text-5xl sm:text-5xl xs:text-4xl leading-sm fw-700 text-white">
+            Have a project of your own?
+          </h2>
+
+          <p class="text-xl md:text-lg text-white mt-16">
+            Small or big, we've got you covered!
+          </p>
+
+          <a href="{% url 'contact' %}" class="button -md -white text-black mt-32">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+      <!-- row end -->
+    </div>
+    <!-- container end -->
+  </section>
+  <!-- section end -->
+
+
+  <!-- footer start -->
+  {% block footer %}
+  {% include 'components/footer.html' %}
+  {% endblock %}
+  <!-- footer end -->
+
+
+</main>
+{% endblock %}

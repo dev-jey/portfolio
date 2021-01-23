@@ -59,7 +59,8 @@ def get_home(request):
     for skill in skills:
         specialties = []
         for specialty in Specialty.objects.all():
-            if specialty.parent_skill.id == skill.id:
+            print(skill.slug, specialty.parent_skill.slug)
+            if specialty.parent_skill.slug == skill.slug:
                 specialties.append(specialty)
         all_skills.append({
             'skill': skill,
@@ -67,3 +68,26 @@ def get_home(request):
         })
 
     return render(request, 'index.html', {'projects':projects, 'skills': all_skills, 'clients': clients})
+
+
+def get_portfolio(request):
+    projects = Project.objects.all()
+    skills = Skill.objects.all()
+    return render(request, 'portfoliopage.html', {'projects':projects, 'skills':skills})
+
+
+def get_about(request):
+    clients = Client.objects.all()
+    return render(request, 'aboutpage.html', {'clients':clients})
+
+def get_contact(request):
+    return render(request, 'contactpage.html')
+
+
+def get_services(request):
+    return render(request, 'servicespage.html')
+
+
+
+def get_single_project(request, slug):
+    return render(request, 'singleproject.html')

@@ -20,7 +20,7 @@ handler400, handler403, handler404, handler500
 )
 
 urlpatterns = [
-    path('portfolio/', admin.site.urls),
+    path('myadmin/', admin.site.urls),
     path('', include('myapp.urls')), # new
 ]
 

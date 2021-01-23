@@ -5,7 +5,7 @@
         {% for project in projects %}
         <div class="fancy-grid__item">
             <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba
-                href="portfolio-single-1.html">
+                href="{{project.slug}}">
                 <div class="portfolioCard__img">
                     <div data-anim-child="img-right -cover-dark-1" class="portfolioCard__img__inner">
                         <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="{{project.my_cover_image}}"></div>
