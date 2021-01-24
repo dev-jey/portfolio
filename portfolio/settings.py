@@ -67,7 +67,7 @@ cloudinary.config(
 MIDDLEWARE = [    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -75,7 +75,10 @@ MIDDLEWARE = [
 ]
 
 CSRF_COOKIE_SECURE=False
-CSRF_USE_SESSIONS=True
+CSRF_COOKIE_DOMAIN=None
+# CSRF_USE_SESSIONS=False
+SESSION_COOKIE_SECURE = False
+
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
