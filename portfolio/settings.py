@@ -36,9 +36,9 @@ if os.environ.get('CURRENT_ENV') == 'development':
     )
 else:
     STATIC_ROOT = os.path.join(BASE_DIR,  'static')
-    DEBUG = False
+    DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '104.236.16.20', 'localhost']
 
 
 # Application definition
