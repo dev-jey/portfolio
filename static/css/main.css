@@ -4669,13 +4669,13 @@ body.is-cursor-active * {
 
 @media (max-width: 767px) {
   .masthead.-type-work-1 .masthead__title {
-    font-size: 4.375rem;
+    font-size: 3.375rem;
   }
 }
 
 @media (max-width: 575px) {
   .masthead.-type-work-1 .masthead__title {
-    font-size: 3.5rem;
+    font-size: 2.25rem;
   }
 }
 
