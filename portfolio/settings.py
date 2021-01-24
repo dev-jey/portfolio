@@ -27,6 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('CURRENT_ENV') == 'development':
@@ -35,7 +39,7 @@ if os.environ.get('CURRENT_ENV') == 'development':
         os.path.join(BASE_DIR, "static"),
     )
 else:
-    STATIC_ROOT = "/home/jey/portfolio/staticfiles/"
+    STATIC_ROOT = os.path.join(BASE_DIR,  'static')
     DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '104.236.16.20', 'localhost']
