@@ -39,11 +39,14 @@
                         <p class="serviceCard__text mt-16">
                             {{skill.skill.description|safe}}
                         </p>
-                        {% for specialty in skill.specialties %}
                         <div class="text-black mt-24">
-                            <p class="mt-8">{{specialty.title}}</p>
+                            {% for specialty in skill.specialties %}
+                            <div class="d-flex align-items-center">
+                                <i class="size-2xs str-width-lg text-accent mr-8" data-feather="check"></i>
+                                <p class="">{{specialty.title}}</p>
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
                 </div>
             </div>
