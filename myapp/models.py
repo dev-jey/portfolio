@@ -31,7 +31,6 @@ def photo_delete(sender, instance, **kwargs):
 class Skill(models.Model):
     title = models.CharField(max_length=100)
     percentage = models.CharField(max_length=100, default='0')
-    image = CloudinaryField('image',folder='portfolio/skills')
     icon = models.CharField(max_length=100, null=True)
     slug = models.SlugField(db_index=True, max_length=1000,
                             editable=False,
