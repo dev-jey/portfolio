@@ -40,7 +40,8 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Role</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">Software Developer</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">Software Developer
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +50,8 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Start</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">{{project.start_date|date}}</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">
+                                                {{project.start_date|date}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +60,8 @@
                                     <div class="masthead__info">
                                         <div data-split="lines" class="masthead__item js-info-item">
                                             <h5 class="text-lg leading-sm fw-600 text-white">Launch</h5>
-                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">{{project.end_date|date}}</p>
+                                            <p class="text-lg leading-sm text-light mt-12 sm:mt-8">
+                                                {{project.end_date|date}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -98,15 +101,31 @@
                     </div>
 
                     <p class="text-3xl md:text-2xl leading-lg text-black mt-24">
-                       {{project.description|safe}}
+                        {{project.description|safe}}
                     </p>
+
                 </div>
 
-                <br><br><br> <br><br><br> <br><br>
+                <br><br><br> <br><br><br> 
                 <div class="col-xl-8 col-lg-10">
                     <div class="d-flex text-xs tracking-md">
                         <p class="text-accent fw-600 mr-16">02.-</p>
-                        <p class="uppercase fw-500">Github Activity Chart</p>
+                        <p class="uppercase fw-500">Technologies Used</p>
+                    </div>
+                    <br>
+                    {% for tech in technologies %}
+                    <div class="d-flex align-items-center">
+                        <i class="size-2xs str-width-lg text-accent mr-8" data-feather="check"></i>
+                        <p class="text-dark">{{tech.title}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <br><br><br> <br><br><br>
+                <div class="col-xl-8 col-lg-10">
+                    <div class="d-flex text-xs tracking-md">
+                        <p class="text-accent fw-600 mr-16">03.-</p>
+                        <p class="uppercase fw-500">Current Github Activity Chart</p>
                     </div>
 
                     <p class="text-3xl md:text-2xl leading-lg text-black mt-24">
