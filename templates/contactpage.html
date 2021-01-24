@@ -116,6 +116,7 @@
           <div class="contact-form -type-1">
             <form class="row x-gap-40 y-gap-32 js-ajax-form" 
               data-message-error="Something went wrong. Please contact me directly at <a href='mailto:savalijey@gmail.com'>savalijey@gmail.com</a>.">
+              {% csrf_token %}
               <div class="col-lg-6">
                 <label class="js-input-group">
                   Name
