@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import (
 render
 )
@@ -51,7 +50,6 @@ def permission_denied(request, *args, **kwargs):
     return response
 
 
-@csrf_exempt
 def get_home(request):
     projects = Project.objects.all()
     featured_project = projects.filter(featured=True).first()
@@ -76,31 +74,26 @@ def get_all_skills():
     return all_skills
 
 
-@csrf_exempt
 def get_portfolio(request):
     projects = Project.objects.all()
     skills = Skill.objects.all()
     return render(request, 'portfoliopage.html', {'projects':projects, 'skills':skills})
 
-@csrf_exempt
 def get_about(request):
     clients = Client.objects.all()
     projects = Project.objects.all()
     featured_project = Project.objects.filter(featured=True).first()
     return render(request, 'aboutpage.html', {'clients':clients, 'featured_project':featured_project, 'projects':projects})
 
-@csrf_exempt
 def get_contact(request):
     return render(request, 'contactpage.html')
 
 
-@csrf_exempt
 def get_services(request):
     skills = get_all_skills()
     return render(request, 'servicespage.html', {'skills': skills})
 
 
-@csrf_exempt
 def get_single_project(request, slug):
     project = Project.objects.filter(slug=slug).first()
     technologies = []
