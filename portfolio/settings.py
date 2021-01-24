@@ -42,7 +42,7 @@ else:
     STATIC_ROOT = os.path.join(BASE_DIR,  'static')
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '104.236.16.20', 'localhost']
+ALLOWED_HOSTS = ['devjey.com', 'www.devjey.com','127.0.0.1', '104.236.16.20', 'localhost']
 
 
 # Application definition
