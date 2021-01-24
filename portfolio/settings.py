@@ -36,7 +36,7 @@ if os.environ.get('CURRENT_ENV') == 'development':
     )
 else:
     STATIC_ROOT = os.path.join(BASE_DIR,  'static')
-    DEBUG = True
+    DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '104.236.16.20', 'localhost']
 
@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 
