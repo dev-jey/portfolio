@@ -2444,31 +2444,31 @@ const PJAX = (function() {
     }
   }
 
-  function init() {
+  // function init() {
 
-    if (!document.body.hasAttribute('data-barba')) return;
+  //   if (!document.body.hasAttribute('data-barba')) return;
 
-    barba.init({
-      sync: true,
-      timeout: 10000,
-      prevent: ({ el }) => {
+  //   barba.init({
+  //     sync: true,
+  //     timeout: 10000,
+  //     prevent: ({ el }) => {
 
-				// element doesn't has attribute
-        if (!el.hasAttribute('data-barba')) return true;
+	// 			// element doesn't has attribute
+  //       if (!el.hasAttribute('data-barba')) return true;
 
-				// element is anchor
-				if (el.getAttribute('href').indexOf('#') > -1) return true;
+	// 			// element is anchor
+	// 			if (el.getAttribute('href').indexOf('#') > -1) return true;
 
-				// elementor preview
-				if (typeof elementor === 'object') return true;
+	// 			// elementor preview
+	// 			if (typeof elementor === 'object') return true;
 
-      },
-      transitions: [
-        generalTransition,
-      ],
-    });
+  //     },
+  //     transitions: [
+  //       generalTransition,
+  //     ],
+  //   });
 
-  }
+  // }
 
   return {
     init: init,
