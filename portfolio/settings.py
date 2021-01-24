@@ -35,7 +35,7 @@ if os.environ.get('CURRENT_ENV') == 'development':
         os.path.join(BASE_DIR, "static"),
     )
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR,  'static')
+    STATIC_ROOT = "/home/jey/portfolio/staticfiles/"
     DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '104.236.16.20', 'localhost']
