@@ -1,0 +1,68 @@
+version: "3.1"
+services:
+  database:
+    restart: always
+    image: postgres:10.1
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - ./portfolio-db:/var/lib/postgresql/data
+    networks:
+      - back-end
+  
+  portfolio:
+    restart: always
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    ports:
+      - "8000:80"
+    image: portfolio
+    volumes:
+      - .:/portfolio
+      - static_volume:/portfolio/staticfiles
+    depends_on:
+      - database
+    entrypoint: ["/bin/bash", "-c", "/portfolio/docker/entry_point.sh"]
+    stdin_open: true
+    tty: true
+    networks:
+      - back-end
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - CURRENT_ENV=${API_KEY}
+      - API_SECRET=${API_SECRET}
+      - CLOUD_NAME=${CLOUD_NAME}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=database
+      - DB_PORT=${DB_PORT}
+  proxy:
+    image: portfolio-nginx
+    build:
+      context: .
+      dockerfile: nginx/nginx.Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - back-end
+    depends_on:
+      - portfolio
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - static_volume:/portfolio/static/
+      # - /etc/ :/etc/nginx/certs/
+    restart: always
+
+networks:
+  back-end:
+  
+networks:
+  back-end:
+
+volumes:
+  static_volume:
+
