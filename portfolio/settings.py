@@ -33,14 +33,8 @@ STATICFILES_FINDERS = [
 ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('CURRENT_ENV') == 'development':
-    DEBUG = True
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, "static"),
-    )
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR,  'static')
-    DEBUG = False
+
+DEBUG = os.environ.get('DEBUG', False)
 
 ALLOWED_HOSTS = ['devjey.com', 'www.devjey.com','127.0.0.1', '104.236.16.20', 'localhost']
 
@@ -115,7 +109,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DB_NAME', ''),
         'USER': os.environ.get('DB_USER', ''),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'PASSWORD': os.environ.get('DB_PASS', ''),
         'HOST': os.environ.get('DB_HOST', ''),
         'PORT': '',
     }
@@ -159,6 +153,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles')
+
 
 TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tinymce.min.js")
 TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce")

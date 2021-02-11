@@ -29,4 +29,4 @@ sleep 5
 echo "<<<<<<<<<<<<<<<<<<<< START API >>>>>>>>>>>>>>>>>>>>>>>>"
 # python manage.py runserver 0.0.0.0:8000
 # Start the API with gunicorn
-gunicorn --bind 0.0.0.0:80 portfolio.wsgi --reload --access-logfile '-' --workers 2
+gunicorn --bind 0.0.0.0:8001 portfolio.wsgi --reload --access-logfile '-' --workers 2

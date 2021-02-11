@@ -45,7 +45,7 @@ RUN chmod 755 /root
 
 # Copy project
 COPY . .
-
+RUN mkdir -p ./staticfiles/
 # Give user permissions to working directory
 RUN chown -R ${APP_USER}:${GROUP_USER} /portfolio
 RUN chmod 755 /portfolio

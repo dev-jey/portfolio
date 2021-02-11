@@ -18,11 +18,11 @@ services:
       context: .
       dockerfile: docker/backend/Dockerfile
     ports:
-      - "8000:80"
+      - "8001:8001"
     image: portfolio
     volumes:
       - .:/portfolio
-      - static_volume:/portfolio/staticfiles
+      - ./staticfiles:/portfolio/staticfiles/
     depends_on:
       - database
     entrypoint: ["/bin/bash", "-c", "/portfolio/docker/entry_point.sh"]
@@ -47,19 +47,17 @@ services:
       dockerfile: nginx/nginx.Dockerfile
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - back-end
     depends_on:
       - portfolio
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - static_volume:/portfolio/static/
-      # - /etc/ :/etc/nginx/certs/
+      - ./staticfiles:/portfolio/static/
+      - /etc/letsencrypt/:/etc/letsencrypt/
     restart: always
 
-networks:
-  back-end:
-  
 networks:
   back-end:
 

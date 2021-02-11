@@ -23,7 +23,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-static/
+# static/
 lib/
 lib64/
 parts/
@@ -101,6 +101,6 @@ db.sqlite3
 *.env*
 blog-app-db/
 *.env*
-*.pem
+# *.pem
 ACTSvpn_new/
 coverage_html_report/
