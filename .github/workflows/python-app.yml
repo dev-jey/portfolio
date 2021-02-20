@@ -127,20 +127,21 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
-        script: |
-          cd /portfolio/
-          git fetch
-          git reset --hard origin/new-portfolio
-          export SECRET_KEY='${{ secrets.SECRET_KEY}}'
-          export CLOUD_NAME=${{ secrets.CLOUD_NAME}}
-          export API_KEY='${{ secrets.API_KEY}}'
-          export API_SECRET='${{ secrets.API_SECRET}}'
-          export DB_NAME='${{ secrets.DB_NAME}}'
-          export DB_USER='${{ secrets.DB_USER}}'
-          export DB_PASS='${{ secrets.DB_PASS}}'
-          export DB_PORT=${{ secrets.DB_PORT}}
-          ls -al
-          docker-compose build
-          docker-compose up -d
-    # needs: [run-tests]
+    - name: Run project
+      script: |
+        cd /portfolio/
+        git fetch
+        git reset --hard origin/new-portfolio
+        export SECRET_KEY='${{ secrets.SECRET_KEY}}'
+        export CLOUD_NAME=${{ secrets.CLOUD_NAME}}
+        export API_KEY='${{ secrets.API_KEY}}'
+        export API_SECRET='${{ secrets.API_SECRET}}'
+        export DB_NAME='${{ secrets.DB_NAME}}'
+        export DB_USER='${{ secrets.DB_USER}}'
+        export DB_PASS='${{ secrets.DB_PASS}}'
+        export DB_PORT=${{ secrets.DB_PORT}}
+        ls -al
+        docker-compose build
+        docker-compose up -d
+  # needs: [run-tests]
 
