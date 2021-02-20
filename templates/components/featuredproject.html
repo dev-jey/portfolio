@@ -8,7 +8,8 @@
             <div class="col-lg-6 z-1">
                 <div data-anim-child="img-right cover-white delay-1">
                     <div class="ratio ratio-1:1" data-parallax="0.7">
-                        <div data-parallax-target class="bg-image js-lazy" data-bg="{{featured_project.my_bg_image}}"></div>
+                        <div data-parallax-target class="bg-image js-lazy" data-bg="{{featured_project.my_bg_image}}">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,16 +31,18 @@
                     </div>
                     <div data-anim-child="slide-up delay-10">
                         <p class="mt-56 lg:mt-40 md:mt-20">
-                            <h6 style="margin-left: -2px;">{{featured_project.title}}</h6><br>
-                            {{featured_project.description | safe}}
+                        <h6 style="margin-left: -2px;">{{featured_project.title}}</h6><br>
+                        {{featured_project.description | safe}}
                         </p>
                     </div>
+                    {% if featured_project %}
                     <div data-anim-child="slide-up delay-11">
                         <a href="{% url 'single-project' featured_project.slug %}"
                             class="button -md -outline-black text-black mt-56 lg:mt-48 md:mt-32">
                             View More
                         </a>
                     </div>
+                    {% endif %}
                 </div>
             </div>
 

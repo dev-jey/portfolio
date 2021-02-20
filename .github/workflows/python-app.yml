@@ -120,28 +120,29 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: Login to AWS
-      uses: aws-actions/configure-aws-credentials@v1
+    - name: Work inside instance
+      uses: appleboy/ssh-action@master
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
-
-    - name: Run project
-      script: |
-        cd /portfolio/
-        git fetch
-        git reset --hard origin/new-portfolio
-        export SECRET_KEY='${{ secrets.SECRET_KEY}}'
-        export CLOUD_NAME=${{ secrets.CLOUD_NAME}}
-        export API_KEY='${{ secrets.API_KEY}}'
-        export API_SECRET='${{ secrets.API_SECRET}}'
-        export DB_NAME='${{ secrets.DB_NAME}}'
-        export DB_USER='${{ secrets.DB_USER}}'
-        export DB_PASS='${{ secrets.DB_PASS}}'
-        export DB_PORT=${{ secrets.DB_PORT}}
-        ls -al
-        docker-compose build
-        docker-compose up -d
+        host: ${{ secrets.AWS_HOST }}
+        username: ${{ secrets.AWS_USERNAME }}
+        password: ${{ secrets.AWS_PASSWORD }}
+        port: ${{ secrets.AWS_PORT }}
+        script: |
+          cd /home/jey/portfolio/
+          whoami
+          ls -al
+          git fetch --all
+          git reset --hard origin/new-portfolio
+          export SECRET_KEY='${{ secrets.SECRET_KEY}}'
+          export CLOUD_NAME=${{ secrets.CLOUD_NAME}}
+          export API_KEY='${{ secrets.API_KEY}}'
+          export API_SECRET='${{ secrets.API_SECRET}}'
+          export DB_NAME='${{ secrets.DB_NAME}}'
+          export DB_USER='${{ secrets.DB_USER}}'
+          export DB_PASS='${{ secrets.DB_PASS}}'
+          export DB_PORT=${{ secrets.DB_PORT}}
+          ls -al
+          docker-compose build
+          docker-compose up -d
   # needs: [run-tests]
 

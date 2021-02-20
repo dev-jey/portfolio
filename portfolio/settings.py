@@ -36,7 +36,8 @@ STATICFILES_FINDERS = [
 
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['devjey.com', 'www.devjey.com','127.0.0.1', '104.236.16.20', 'localhost']
+ALLOWED_HOSTS = ['devjey.com', 'www.devjey.com', '0.0.0.0',
+                 '127.0.0.1', '3.141.210.184', 'localhost']
 
 
 # Application definition
@@ -53,16 +54,16 @@ INSTALLED_APPS = [
     'cloudinary',
 ]
 
-#Cloudinary
-#add config 
+# Cloudinary
+# add config
 cloudinary.config(
-  cloud_name = os.environ.get('CLOUD_NAME'),
-  api_key = os.environ.get('API_KEY'),
-  api_secret = os.environ.get('API_SECRET'),
-  secure = True
+    cloud_name=os.environ.get('CLOUD_NAME'),
+    api_key=os.environ.get('API_KEY'),
+    api_secret=os.environ.get('API_SECRET'),
+    secure=True
 )
 
-MIDDLEWARE = [    
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
@@ -72,8 +73,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_COOKIE_SECURE=False
-CSRF_COOKIE_DOMAIN=None
+CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_DOMAIN = None
 # CSRF_USE_SESSIONS=False
 SESSION_COOKIE_SECURE = False
 
@@ -167,7 +168,7 @@ TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce")
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 TINYMCE_DEFAULT_CONFIG = {
-    'height' : 500,
+    'height': 500,
     'plugins': "image,imagetools,media,codesample,link,code",
     'cleanup_on_startup': True,
     'menubar': False,
@@ -175,5 +176,5 @@ TINYMCE_DEFAULT_CONFIG = {
     'image_caption': True,
     'image_advtab': True,
     'custom_undo_redo_levels': 10,
-    'file_browser_callback' : "myFileBrowser"
-    }
+    'file_browser_callback': "myFileBrowser"
+}

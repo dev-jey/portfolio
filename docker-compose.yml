@@ -32,7 +32,8 @@ services:
       - back-end
     environment:
       - SECRET_KEY=${SECRET_KEY}
-      - CURRENT_ENV=${API_KEY}
+      - CURRENT_ENV=${CURRENT_ENV}
+      - API_KEY=${API_KEY}
       - API_SECRET=${API_SECRET}
       - CLOUD_NAME=${CLOUD_NAME}
       - DB_NAME=${DB_NAME}
