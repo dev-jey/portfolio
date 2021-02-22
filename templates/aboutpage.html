@@ -156,33 +156,7 @@
 
 
   <!-- section start -->
-  <section class="layout-pt-md layout-pb-md bg-dark-1">
-    <!-- container start -->
-    <div class="container">
-      <!-- row start -->
-      <div class="row x-gap-32 y-gap-32">
 
-        {% for client in clients %}
-        <div class="col-lg-3 col-sm-6">
-          <div data-anim="slide-up delay-1" class="clientsItem -hover -light ratio ratio-3:2 border-light rounded-4">
-            <div class="clientsItem__img">
-              <img class="col-7" src="{{client.cloudinary_image}}" alt="Client">
-            </div>
-
-            <div class="clientsItem__content">
-              <h5 class="clientsItem__title text-xl">
-                {{client.title}}
-              </h5>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-
-      </div>
-      <!-- row end -->
-    </div>
-    <!-- container end -->
-  </section>
   <!-- section end -->
 
   <!-- section start -->
