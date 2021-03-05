@@ -69,7 +69,7 @@ def get_all_languages():
 
 
 def get_home(request):
-    projects = get_all_projects()
+    projects = get_all_projects().filter(featured=True)
     featured_project = projects.filter(featured=True).first()
     all_skills = get_all_skills()
     return render(request, 'index.html', {'projects': projects, 'skills': all_skills, 'featured_project': featured_project})
