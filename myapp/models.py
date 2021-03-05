@@ -6,6 +6,7 @@ from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 from tinymce.models import HTMLField
 from django.utils.text import slugify
+from django.utils.html import format_html
 import cloudinary
 
 
@@ -88,6 +89,19 @@ class Project(models.Model):
     @property
     def my_bg_image(self):
         return f"https://res.cloudinary.com/{os.environ.get('CLOUD_NAME', '')}/{self.bg_image}"
+
+    # Show images in django admin
+    def bg_image_tag(self):
+        return format_html('<img href="{0}" src="{0}" width="150" height="150" />'.format(self.my_bg_image))
+
+    bg_image_tag.allow_tags = True
+    bg_image_tag.short_description = 'BG Image'
+
+    def cover_image_tag(self):
+        return format_html('<img href="{0}" src="{0}" width="150" height="150" />'.format(self.my_cover_image))
+
+    cover_image_tag.allow_tags = True
+    cover_image_tag.short_description = 'Cover Image'
 
     class Meta:
         '''Defines the ordering of the

@@ -23,7 +23,7 @@ class ProjectAdmin(admin.ModelAdmin, DynamicArrayMixin):
 
     earch_fields = ('title',)
     list_display = ("title", "description", "featured", "languages",
-                    "cover_image", "bg_image", "project_technologies",
+                    "bg_image_tag", "cover_image_tag", "project_technologies",
                     "created_at")
 
 
