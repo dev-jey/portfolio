@@ -10,18 +10,18 @@
   {% include 'components/navigation.html' %}
   {% endblock %}
   <!-- header end -->
-<br><br><br>
+  <br><br><br>
   <section class="layout-pt-md layout-pb-md">
     <div class="section-filter">
 
-      <!--
+
       <div class="container">
         <div class="row y-gap-32 justify-content-between align-items-center">
           <div class="col-auto">
             <div class="filter-button-group text-dark fw-500">
               <button class="button mr-20 btn-active" data-filter="*">Show All</button>
-              {% for skill in skills %}
-              <button class="button mr-20" data-filter=".{{skill.slug}}">{{skill.title}}</button>
+              {% for lang in languages %}
+              <button class="button mr-20" data-filter=".{{lang.title}}">{{lang.title}}</button>
               {% endfor %}
             </div>
           </div>
@@ -33,8 +33,8 @@
           </div>
         </div>
       </div>
-      -->
-     
+
+
 
 
       <!-- container start -->
@@ -42,7 +42,7 @@
         <div class="masonry -col-2 -gap-32">
           <div class="masonry__sizer"></div>
           {% for project in projects %}
-          <div class="masonry__item  {{project.skill.slug}}">
+          <div class="masonry__item  {%for language in project.languages%}{{ language }}  {%endfor%}">
             <div data-anim="slide-up" class="portfolioCard -type-2 -hover">
               <div class="ratio">
                 <div class="portfolioCard__img">
@@ -52,7 +52,10 @@
                 </div>
 
                 <div class="portfolioCard__content">
-                  <a href="#" class="portfolioCard__category text-light mb-8">{{project.skill.title}}</a>
+                  <a href="#" class="portfolioCard__category text-light mb-8">
+                    {% for language in project.languages %}
+                    {{language}}
+                    {% endfor %}</a>
                   <h3 class="portfolioCard__title text-3xl md:text-2xl fw-600 text-white">{{project.title}}</h3>
                 </div>
 

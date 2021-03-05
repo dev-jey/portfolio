@@ -15,7 +15,9 @@
                 <div class="portfolioCard__content pt-24">
                     <div data-split="lines" data-anim-child="split-lines delay-6">
                         <p class="portfolioCard__category leading-md text-dark">
-                            {{project.skill.title}}
+                            {% for lang in project.languages %}
+                            {{lang}}
+                            {% endfor %}
                         </p>
                     </div>
 

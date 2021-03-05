@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_better_admin_arrayfield',
     'myapp',
     'tinymce',
     'cloudinary',
@@ -160,7 +161,6 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles')
-
 
 TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tinymce.min.js")
 TINYMCE_JS_ROOT = os.path.join(STATIC_URL, "tiny_mce")

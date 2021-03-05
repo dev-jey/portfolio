@@ -1,12 +1,35 @@
 from django.contrib import admin
+from django_better_admin_arrayfield.admin.mixins import DynamicArrayMixin
+from myapp.models import Skill, Project, Language
 
-from myapp.models import Client, Skill, Specialty, Project, ProjectTechnology
 
-admin.site.register(Client)
-admin.site.register(Skill)
-admin.site.register(Specialty)
-admin.site.register(Project)
-admin.site.register(ProjectTechnology)
+class SkillAdmin(admin.ModelAdmin, DynamicArrayMixin):
+    """Define custom model display for skills on admin dashboard."""
+
+    earch_fields = ('title',)
+    list_display = ("title", "specialties", "percentage",
+                    "icon", "description", "created_at")
+
+
+class LanguageAdmin(admin.ModelAdmin):
+    """Define custom model display for skills on admin dashboard."""
+
+    earch_fields = ('title',)
+    list_display = ("title", "description", "created_at")
+
+
+class ProjectAdmin(admin.ModelAdmin, DynamicArrayMixin):
+    """Define custom model display for projects on admin dashboard."""
+
+    earch_fields = ('title',)
+    list_display = ("title", "description", "featured", "languages",
+                    "cover_image", "bg_image", "project_technologies",
+                    "created_at")
+
+
+admin.site.register(Skill, SkillAdmin)
+admin.site.register(Project, ProjectAdmin)
+admin.site.register(Language, LanguageAdmin)
 
 admin.site.site_header = "DevJey Portfolio"
 admin.site.site_title = "DevJey Portfolio"

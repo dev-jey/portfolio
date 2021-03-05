@@ -12,6 +12,7 @@ sqlparse = "==0.4.1"
 cloudinary = "*"
 django-tinymce = "*"
 Django = "==3.1.5"
+django-better-admin-arrayfield = "*"
 
 [dev-packages]
 

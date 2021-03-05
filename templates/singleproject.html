@@ -23,7 +23,9 @@
                     <div class="col-xl-10 col-sm-10 z-3">
                         <div data-split="lines">
                             <p class="masthead__subtitle text-lg sm:text-base text-white mb-32 sm:mb-24 js-subtitle">
-                                {{project.skill.title}}
+                                {% for lang in project.languages %}
+                                {{lang}}
+                                {% endfor %}
                             </p>
                         </div>
 
@@ -111,7 +113,7 @@
                         <p class="uppercase fw-500">Technologies Used</p>
                     </div>
                     <br>
-                    {% for tech in technologies %}
+                    {% for tech in project.project_technologies %}
                     <div class="d-flex align-items-center">
                         <i class="size-2xs str-width-lg text-accent mr-8" data-feather="check"></i>
                         <p class="text-dark">{{tech.title}}</p>
@@ -119,7 +121,7 @@
                     {% endfor %}
                 </div>
 
-                
+
                 <div class="col-xl-8 col-lg-10 mt-24 pt-24">
                     <div class="d-flex text-xs tracking-md">
                         <p class="text-accent fw-600 mr-16">03.-</p>

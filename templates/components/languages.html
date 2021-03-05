@@ -16,8 +16,10 @@
           </h2>
           <p class="mt-24">
             I am a passionate full stack software developer with over 3 years of experience in the field. My main stack
-            is Python & Javascript and I have immense experience also working with related technologies in architecture design. Throughout my time as a
-            software developer, I have worked with different teams to create applications that optimized processes, saved
+            is Python & Javascript and I have immense experience also working with related technologies in architecture
+            design. Throughout my time as a
+            software developer, I have worked with different teams to create applications that optimized processes,
+            saved
             on cost, and improved users' experience.
           </p>
         </div>
@@ -28,10 +30,10 @@
         <div class="lineChart">
 
           {% for skill in skills %}
-          <div data-anim-child="line-chart" class="lineChart__item" data-percent="{{skill.skill.percentage}}">
+          <div data-anim-child="line-chart" class="lineChart__item" data-percent="{{skill.percentage}}">
             <div class="lineChart__content text-black fw-500">
-              <p>{{skill.skill.title}}</p>
-              <p class="lineChart__number number js-number">{{skill.skill.percentage}}%</p>
+              <p>{{skill.title}}</p>
+              <p class="lineChart__number number js-number">{{skill.percentage}}%</p>
             </div>
 
             <div class="lineChart-bar">

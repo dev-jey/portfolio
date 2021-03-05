@@ -28,16 +28,16 @@
                         <div class="d-flex align-items-center ml-minus-4">
                             <div data-anim-child="img-right cover-dark-2"
                                 class="px-20 py-20 bg-white shadow-light rounded-full">
-                                <i class="size-md str-width-md text-accent" data-feather="{{skill.skill.icon}}"></i>
+                                <i class="size-md str-width-md text-accent" data-feather="{{skill.icon}}"></i>
                             </div>
                         </div>
 
                         <h3 class="serviceCard__title text-2xl fw-500 tacking-none mt-32">
-                            {{skill.skill.title}}
+                            {{skill.title}}
                         </h3>
 
                         <p class="serviceCard__text mt-16">
-                            {{skill.skill.description|safe}}
+                            {{skill.description|safe}}
                         </p>
                         <div class="text-black mt-24">
                             {% for specialty in skill.specialties %}
